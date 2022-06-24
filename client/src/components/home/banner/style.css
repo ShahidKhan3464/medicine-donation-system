@@ -1,0 +1,43 @@
+.carousel {
+    height: 100%;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel-caption {
+    top: 40%;
+}
+
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 span {
+    color: #303030;
+    font-weight: 600;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+}
