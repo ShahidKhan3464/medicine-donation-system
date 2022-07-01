@@ -51,7 +51,7 @@ const User = ({ handleLoggedIn }) => {
                 ? <div className="loader">
                     <FadeLoader loading={loading} />
                 </div>
-                : <div className="Login-container">
+                : <div className="flex-container">
                     <img src={require("../../../assets/images/login.png")} alt="login" />
                     <Form className='was-validated' onSubmit={handleSubmit}>
                         <Form.Group>
@@ -78,7 +78,7 @@ const User = ({ handleLoggedIn }) => {
 
                         <Button variant="success" type="submit">Login</Button>
                         <p>
-                            Didn't have an account?
+                            Don't have an account?
                             <Link to="/signup"> Sign Up</Link>
                         </p>
                     </Form>

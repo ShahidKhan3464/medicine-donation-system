@@ -58,7 +58,7 @@ const SignUp = () => {
                 ? <div className="loader">
                     <FadeLoader loading={loading} />
                 </div>
-                : <div className="sign-up-container">
+                : <div className="flex-container">
                     <img src={require("..//..//..//assets/images/signup.png")} alt="signup" />
                     <Form className='was-validated' onSubmit={handleSubmit}>
                         <Form.Group>

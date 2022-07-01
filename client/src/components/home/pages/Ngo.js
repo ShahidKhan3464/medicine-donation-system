@@ -50,7 +50,7 @@ const Ngo = ({ handleLoggedIn }) => {
                 ? <div className="loader">
                     <FadeLoader loading={loading} />
                 </div>
-                : <div className="Login-container">
+                : <div className="flex-container">
                     <img src={require("../../../assets/images/login.png")} alt="login" />
                     <Form className='was-validated' onSubmit={handleSubmit}>
                         <Form.Group>

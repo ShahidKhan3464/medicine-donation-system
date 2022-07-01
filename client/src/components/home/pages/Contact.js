@@ -10,7 +10,7 @@ const Contact = () => {
                 <h1>Contact Us</h1>
                 <div className="underline"></div>
             </div>
-            <div className="contact-container">
+            <div className="flex-container">
                 <img src={require("..//..//..//assets/images/contact.png")} alt="contact" />
                 <Form className='was-validated'>
                     <Form.Group>
@@ -28,7 +28,7 @@ const Contact = () => {
                         <Form.Control as="textarea" name='message' rows={3} minLength='5' required />
                     </Form.Group>
 
-                    <Button variant="success" type="submit">Send a Message</Button>
+                    <Button type="submit">Send a Message</Button>
                 </Form>
             </div>
         </section>

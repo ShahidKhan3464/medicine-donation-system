@@ -1,17 +1,13 @@
 .navbar {
     height: 5rem;
     opacity: 0.9;
-    background: rgb(8 10 10 / 85%);
-    border-bottom: 2px solid rgb(79, 79, 79);
+    background: var(--bgColor);
+    border-bottom: 2px solid var(--mainBorderColor);
 }
 
 .navbar a {
-    color: white;
-    font-weight: 500;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    text-decoration: none;
     padding: 0.5rem 1.2rem;
+    letter-spacing: var(--mainSpacing);
 }
 
 .logo {
@@ -23,11 +19,11 @@
 .logo-text {
     position: relative;
     top: 0.3rem;
-    color: #79b91c;
-    font-weight: 600;
     font-size: 1.6rem;
-    letter-spacing: 1px;
-    text-shadow: 0 0 0.57rem #1d0505;
+    color: var(--primaryColor);
+    font-weight: var(--mainWeight);
+    text-shadow: var(--textShadow);
+    letter-spacing: var(--mainSpacing);
 }
 
 .navbar-nav {
@@ -35,7 +31,7 @@
 }
 
 .navbar .active, a:hover {
-    color: #79b91c !important;
+    color: var(--primaryColor) !important;
 }
 
 .modules {
@@ -44,6 +40,6 @@
 
 .signOutBtn {
     border: none;
-    letter-spacing: 1px;
-    background: #79b91c;
+    background: var(--primaryColor);
+    letter-spacing: var(--mainSpacing);
 }

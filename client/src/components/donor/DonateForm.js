@@ -186,7 +186,7 @@ const DonateForm = () => {
                                     />
                                 </Form.Group>
                             </div>
-                            <Button variant="success" type="submit" className="donationBtn">Donate Now</Button>
+                            <Button type="submit" className="donationBtn">Donate Now</Button>
                         </Form>
                     </div>
                 }

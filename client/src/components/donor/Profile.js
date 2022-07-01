@@ -88,7 +88,7 @@ const Profile = () => {
                     ? <div className="loader">
                         <FadeLoader loading={loading} />
                     </div>
-                    : <div className="profile-container">
+                    : <div className="flex-container">
                         <img src={require("..//..//assets/images/profile.png")} alt="profile" />
                         <Form className='was-validated' onSubmit={updateProfile} >
                             <Form.Group>
