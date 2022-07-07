@@ -35,7 +35,7 @@
 }
 
 .upper-footer ul li a {
-    color: var(--darkGrey);
+    color: var(--darkGrey) !important;
 }
 
 .upper-footer .address {

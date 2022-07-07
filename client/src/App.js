@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import './App.css';
 
 // HOME
 import Header from './components/home/header/Header';
@@ -23,7 +24,9 @@ import UserProfile from './components/donor/Profile';
 import NgoHomepage from './components/ngo/index';
 import DonationList from './components/ngo/DonationList';
 import NgoProfile from './components/ngo/Profile';
-import './App.css';
+
+// Admin
+import AdminDashboard from './components/admin/index';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(null);
@@ -43,7 +46,7 @@ const App = () => {
 
   return (
     <>
-      {loggedIn === null && <Header />}
+      {loggedIn !== null && <Header />}
       <Routes>
         {/* **********HOME******** */}
         <Route exact path='/' element={<Home />} />
@@ -65,8 +68,12 @@ const App = () => {
         <Route exact path='/ngo/homepage' element={<NgoHomepage handleLogout={handleLogout} />} />
         <Route exact path='/donationList' element={<DonationList />} />
         <Route exact path='/ngo/profile' element={<NgoProfile />} />
+
+        {/* ********ADMIN********* */}
+        <Route exact path='/admin/dashboard' element={<AdminDashboard />} />
+
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

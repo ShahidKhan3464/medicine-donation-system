@@ -58,7 +58,7 @@ const MyDonation = () => {
                 </div>
                 {loading
                     ? <Loader />
-                    : !error && <Table striped bordered hover>
+                    : !error && <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Ngo</th>

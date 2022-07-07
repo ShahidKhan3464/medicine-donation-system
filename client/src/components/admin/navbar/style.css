@@ -1,0 +1,43 @@
+.navbar {
+    border-bottom: none;
+    margin-bottom: 4rem;
+    background: var(--mainWhite);
+    box-shadow: var(--lightShadow);
+}
+
+.navbar-right {
+    padding: 0 2rem;
+}
+
+.navbar-right input {
+    border: none;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background: var(--mainBackground);
+    letter-spacing: var(--mainSpacing);
+}
+
+.navbar-left {
+    padding: 0 2rem;
+}
+
+.navbar-left svg {
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: var(--mainBackground);
+}
+
+.navbar-left svg:hover {
+    background: var(--mainWhite);
+}
+
+.navbar-left img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}

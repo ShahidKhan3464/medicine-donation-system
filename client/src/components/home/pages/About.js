@@ -41,7 +41,7 @@ const About = () => {
                                 <img src={require("..//..//..//assets/images/join.png")} alt="joinUs" />
                                 <h3>Join Us</h3>
                                 <p>
-                                    You can join us easily with different aspects to become a part of our community. You can be a Donor, a Receiver, Volunteer, Pharmacist or any Non Governmental Organization.
+                                    You can join us easily with different aspects to become a part of our community. You can be a Donor, a Receiver, Volunteer or any Non Governmental Organization.
                                 </p>
                             </div>
                         </div>
