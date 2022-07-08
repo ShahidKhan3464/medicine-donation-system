@@ -73,7 +73,7 @@ const App = () => {
         <Route exact path='/admin/dashboard' element={<AdminDashboard />} />
 
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

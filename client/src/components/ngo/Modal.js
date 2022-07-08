@@ -13,7 +13,7 @@ const MedicineModal = ({ modal, setModal, medicines: { donatedMedicine, isApprov
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Table striped bordered hover>
+                    <Table striped bordered hover responsive className='Table'>
                         <thead>
                             <tr>
                                 <th>Name</th>

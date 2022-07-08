@@ -44,7 +44,7 @@ const User = ({ handleLoggedIn }) => {
     return (
         <section className="Login">
             <div className="title">
-                <h1>User Login</h1>
+                <h2>User Login</h2>
                 <div className="underline"></div>
             </div>
             {loading

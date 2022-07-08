@@ -19,8 +19,6 @@
     padding-bottom: 10px;
     display: inline-block;
     text-transform: uppercase;
-    font-weight: var(--mainWeight);
-    letter-spacing: var(--mainSpacing);
     border-bottom: 1px solid var(--mainBorderColor);
 }
 

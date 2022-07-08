@@ -53,12 +53,12 @@ const DonationList = () => {
             {modal && <Modal modal={modal} setModal={setModal} medicines={medicines} />}
             <section className="my-donation">
                 <div className="title">
-                    <h1>Donation List</h1>
+                    <h2>Donation List</h2>
                     <div className="underline"></div>
                 </div>
                 {loading
                     ? <Loader />
-                    : !error && <Table striped bordered hover>
+                    : !error && <Table striped bordered hover responsive className="Table">
                         <thead>
                             <tr>
                                 <th>Donor</th>

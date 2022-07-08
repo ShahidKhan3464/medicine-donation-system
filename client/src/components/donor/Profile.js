@@ -81,7 +81,7 @@ const Profile = () => {
             <Header />
             <section className="profile">
                 <div className="title">
-                    <h1>My Profile</h1>
+                    <h2>My Profile</h2>
                     <div className="underline"></div>
                 </div>
                 {loading

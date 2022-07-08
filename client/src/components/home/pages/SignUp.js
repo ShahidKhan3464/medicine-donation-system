@@ -51,7 +51,7 @@ const SignUp = () => {
     return (
         <section className="sign-up">
             <div className="title">
-                <h1>Sign Up</h1>
+                <h2>Sign Up</h2>
                 <div className="underline"></div>
             </div>
             {loading

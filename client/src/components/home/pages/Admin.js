@@ -43,7 +43,7 @@ const Admin = ({ handleLoggedIn }) => {
     return (
         <section className="Login">
             <div className="title">
-                <h1>Admin Login</h1>
+                <h2>Admin Login</h2>
                 <div className="underline"></div>
             </div>
             {loading

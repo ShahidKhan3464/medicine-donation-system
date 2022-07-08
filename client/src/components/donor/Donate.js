@@ -69,7 +69,7 @@ const Donate = () => {
                 </div>
                 {loading
                     ? <Loader />
-                    : ngos.length !== 0 && <Table striped bordered hover>
+                    : ngos.length !== 0 && <Table striped bordered hover responsive className="Table">
                         <thead>
                             <tr>
                                 <th>S.No</th>

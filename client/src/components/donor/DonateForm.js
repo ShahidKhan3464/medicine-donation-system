@@ -70,7 +70,7 @@ const DonateForm = () => {
             <Header />
             <section className="donate-form">
                 <div className="title">
-                    <h1>Donate Form</h1>
+                    <h2>Donate Form</h2>
                     <div className="underline"></div>
                 </div>
                 {loading
@@ -78,7 +78,7 @@ const DonateForm = () => {
                     : <div className="details">
                         <Form className="was-validated" onSubmit={handleDonation}>
                             <div className="donor-details">
-                                <h2>Donor Detials:</h2>
+                                <h5>Donor Detials:</h5>
                                 <Form.Group className="form-group">
                                     <Form.Label htmlFor="name">FullName:</Form.Label>
                                     <Form.Control
@@ -125,7 +125,7 @@ const DonateForm = () => {
                                 </Form.Group>
                             </div>
                             <div className="medicine-details">
-                                <h2>Medicine Details:</h2>
+                                <h5>Medicine Details:</h5>
                                 <Form.Group className="form-group">
                                     <Form.Label htmlFor="name">Medicine Name:</Form.Label>
                                     <Form.Control

@@ -54,7 +54,7 @@
 
 .menuItem a {
     font-size: 14px;
-    text-decoration: none;
+    /* text-decoration: none; */
     letter-spacing: var(--mainSpacing);
     color: var(--headingColor) !important;
 }
@@ -63,18 +63,18 @@
     cursor: pointer;
 }
 
-.sidebar-menu .menuItem:last-child {
+/* .sidebar-menu .menuItem:last-child {
     position: absolute;
     bottom: 2.3rem;
     width: 100%;
-}
+} */
 
-.active {
+.activeItem {
     margin-left: 0;
     background: var(--darkGrey);
 }
 
-.active::before {
+.activeItem::before {
     width: 7px;
     content: "";
     height: 100%;

@@ -37,6 +37,7 @@
     background: var(--darkGrey);
 }
 
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
@@ -47,20 +48,29 @@ body {
     background: var(--mainBackground) !important;
 }
 
-/* ********Links******** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--mainWeight) !important;
+    letter-spacing: var(--mainSpacing) !important;
+}
+
+
 a {
     text-decoration: none !important;
     color: var(--mainWhite) !important;
 }
 
-/* *****Paragraphs****** */
 p {
     font-size: 14px;
     line-height: 25px;
     letter-spacing: var(--mainSpacing);
 }
 
-/* ******Flex Box******* */
+/* ******Flex Form******* */
 .flex-container {
     width: 100%;
     display: flex;
@@ -101,8 +111,8 @@ form .form-control {
 }
 
 .form-control:focus {
-    background: var(--mainBackground);
     box-shadow: var(--darkShadow) !important;
+    background: var(--mainBackground) !important;
 }
 
 form button {

@@ -1,6 +1,8 @@
 import React from 'react'
+import Table from 'react-bootstrap/Table'
+import './style.css'
 
-const Table = () => {
+const DonationTable = () => {
 
     function createData(name, email, phone, address, date, medicine, status) {
         return { name, email, phone, address, date, medicine, status };
@@ -9,15 +11,15 @@ const Table = () => {
     const donations = [
         createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Calpol", "Approved"),
         createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Calpol", "Pending"),
-        // createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Amoxil", "Approved"),
-        // createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Amoxil", "Delivered"),
+        createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Amoxil", "Approved"),
+        createData("Shahid Khan", "s@gmail.com", 12345, "Peshawar", "2/6/2022", "Amoxil", "Delivered"),
     ];
 
     return (
-        <div className="Table">
-            <h3>Recent Donations</h3>
+        <div className='Tabl'>
+            <h5>Recent Donations</h5>
             <div className="Table-container">
-                <Table striped bordered hover responsive>
+                <Table responsive>
                     <thead>
                         <tr>
                             <th>Donor</th>
@@ -38,8 +40,8 @@ const Table = () => {
                                 <td>{donation.phone}</td>
                                 <td>{donation.address}</td>
                                 <td>{new Date(donation.date).toLocaleDateString('en-GB')}</td>
-                                <td>{donation.medicine}</td>
-                                <td>{donation.status}</td>
+                                <td className='Details'>{donation.medicine}</td>
+                                <td className='status'>{donation.status}</td>
                                 <td>
                                     <button>Action</button>
                                 </td>
@@ -52,4 +54,4 @@ const Table = () => {
     )
 }
 
-export default Table
+export default DonationTable

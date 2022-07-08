@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <section className="contact">
             <div className="title">
-                <h1>Contact Us</h1>
+                <h2>Contact Us</h2>
                 <div className="underline"></div>
             </div>
             <div className="flex-container">

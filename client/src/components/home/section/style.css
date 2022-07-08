@@ -8,10 +8,10 @@
     margin-bottom: 60px;
 }
 
-.title h1 {
-    color: var(--headingColor);
+.title h2 {
     margin-bottom: 10px;
     font-family: 'Lora', serif;
+    color: var(--headingColor);
 }
 
 .title .underline {

@@ -8,7 +8,7 @@ const Top = () => {
     return (
         <section className='system-work'>
             <div className='title'>
-                <h1>How Does it Work</h1>
+                <h2>How Does it Work</h2>
                 <div className="underline"></div>
             </div>
             <Container>

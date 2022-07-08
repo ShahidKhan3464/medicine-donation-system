@@ -7,14 +7,14 @@ import './style.css'
 const Navbar = () => {
 
     return (
-        <div className='navbar'>
-            <div className='navbar-right'>
+        <div className='Navbar'>
+            <div className='Navbar-right'>
                 <div className="input-field">
                     <input type='text' placeholder='Search' />
-                    <BiSearch style={{ position: 'relative', right: '2rem', fontSize: '1.3rem' }} />
+                    <BiSearch style={{ position: 'relative', right: '2rem', fontSize: '1.2rem' }} />
                 </div>
             </div>
-            <div className='navbar-left'>
+            <div className='Navbar-left'>
                 <div className='navbar-item'>
                     <IoMdNotificationsOutline />
                     <MdSettings />

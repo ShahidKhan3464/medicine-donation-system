@@ -8,7 +8,7 @@ const Top = () => {
     return (
         <section className='top'>
             <div className='title'>
-                <h1>Why Donate to us</h1>
+                <h2>Why Donate to us</h2>
                 <div className="underline"></div>
                 <p>Because Health is the fundamental part of human being.</p>
             </div>

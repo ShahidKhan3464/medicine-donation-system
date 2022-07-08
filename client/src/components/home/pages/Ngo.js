@@ -43,7 +43,7 @@ const Ngo = ({ handleLoggedIn }) => {
     return (
         <section className="Login">
             <div className="title">
-                <h1>Ngo Login</h1>
+                <h2>Ngo Login</h2>
                 <div className="underline"></div>
             </div>
             {loading

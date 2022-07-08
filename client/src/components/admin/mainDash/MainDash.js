@@ -10,7 +10,7 @@ const MainDash = () => {
         <>
             <div className="MainDash">
                 <Navbar />
-                <h1>Dashboard</h1>
+                <h2>Dashboard</h2>
                 <Cards />
                 <Table />
             </div>
