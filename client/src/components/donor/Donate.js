@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"
 import Alert from 'react-bootstrap/Alert'
 import Table from 'react-bootstrap/Table'
+import Loader from "../loader/Loader"
 import Header from "./Header"
-import Loader from "./Loader";
 
 const Donate = () => {
     const navigate = useNavigate()

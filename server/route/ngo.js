@@ -6,7 +6,17 @@ const Ngo = require('..//model/Ngo')
 const auth = require('./verifyToken')
 require('dotenv/config')
 
-ngoRoute.post('/addition', auth, async (req, res) => {
+ngoRoute.get('/', async (req, res) => {
+    try {
+        const ngos = await Ngo.find()
+        res.send(ngos)
+    }
+    catch (error) {
+        res.status(500).send({ message: error && error.message })
+    }
+})
+
+ngoRoute.post('/addition', async (req, res) => {
     try {
         const duplicateNgo = await Ngo.findOne({ email: req.body.email })
         if (duplicateNgo == null) {

@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom"
 import Swal from 'sweetalert2'
 import axios from "axios"
 import Header from "./Header"
-import Loader from "./Loader";
+import Loader from "../loader/Loader"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/esm/Button"
 

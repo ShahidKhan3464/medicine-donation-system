@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import Table from 'react-bootstrap/Table'
 import Alert from 'react-bootstrap/Alert'
+import Loader from "../loader/Loader"
 import Header from "./Header"
-import Loader from "./Loader";
 import Modal from "./Modal";
 
 const MyDonation = () => {

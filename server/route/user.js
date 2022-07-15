@@ -6,6 +6,16 @@ const auth = require('./verifyToken')
 const User = require('..//model/User')
 require('dotenv/config')
 
+userRoute.get('/', async (req, res) => {
+    try {
+        const users = await User.find({ isAdmin: false })
+        res.send(users)
+    }
+    catch (error) {
+        res.status(500).send({ message: error && error.message })
+    }
+})
+
 userRoute.post('/signup', async (req, res) => {
     try {
         const duplicateUser = await User.findOne({ email: req.body.email })

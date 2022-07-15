@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from "react"
 import { useNavigate } from "react-router-dom";
-import FadeLoader from "react-spinners/FadeLoader";
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
+import Loader from "../loader/Loader";
 import Header from "./Header"
 
 const Profile = () => {
@@ -85,9 +85,7 @@ const Profile = () => {
                     <div className="underline"></div>
                 </div>
                 {loading
-                    ? <div className="loader">
-                        <FadeLoader loading={loading} />
-                    </div>
+                    ? <Loader />
                     : <div className="flex-container">
                         <img src={require("..//..//assets/images/profile.png")} alt="profile" />
                         <Form className='was-validated' onSubmit={updateProfile} >

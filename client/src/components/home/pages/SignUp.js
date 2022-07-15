@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { Link } from 'react-router-dom'
-import FadeLoader from "react-spinners/FadeLoader";
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
+import Loader from "../../loader/Loader";
 
 const SignUp = () => {
     const [username, setUserName] = useState('')
@@ -55,9 +55,7 @@ const SignUp = () => {
                 <div className="underline"></div>
             </div>
             {loading
-                ? <div className="loader">
-                    <FadeLoader loading={loading} />
-                </div>
+                ? <Loader />
                 : <div className="flex-container">
                     <img src={require("..//..//..//assets/images/signup.png")} alt="signup" />
                     <Form className='was-validated' onSubmit={handleSubmit}>
