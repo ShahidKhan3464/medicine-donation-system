@@ -7,11 +7,11 @@ import './style.css'
 const Navbar = () => {
 
     return (
-        <div className='Navbar'>
+        <nav className='Navbar'>
             <div className='Navbar-right'>
                 <div className="input-field">
                     <input type='text' placeholder='Search' />
-                    <BiSearch style={{ position: 'relative', right: '2rem', fontSize: '1.2rem' }} />
+                    <BiSearch style={{ position: 'relative', right: '2rem', fontSize: '1.3rem' }} />
                 </div>
             </div>
             <div className='Navbar-left'>
@@ -21,7 +21,7 @@ const Navbar = () => {
                     <img src="https://avatars0.githubusercontent.com/u/527052?s=460&u=f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8&v=3" alt="avatar" />
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 

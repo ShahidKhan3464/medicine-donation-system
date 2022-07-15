@@ -10,26 +10,26 @@ export const SidebarData = [
     {
         icon: BiHomeAlt,
         heading: "Dashboard",
-        pathname: "#",
+        pathname: "/admin/dashboard",
     },
     {
         icon: FaDonate,
         heading: "Stock",
-        pathname: "#",
+        pathname: "/admin/stock",
     },
     {
         icon: FiUsers,
         heading: "Users",
-        pathname: "#",
+        pathname: "/admin/users",
     },
     {
         icon: SiWorldhealthorganization,
         heading: 'Ngo',
-        pathname: "#",
+        pathname: "/admin/ngos",
     },
     {
         icon: AiOutlineUserAdd,
         heading: 'Add Ngo',
-        pathname: "#",
+        pathname: "/admin/addNgo",
     },
 ];

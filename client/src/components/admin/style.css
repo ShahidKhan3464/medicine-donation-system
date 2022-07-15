@@ -1,8 +1,6 @@
-.admin-container {
-    margin: 0;
+.grid-container {
     gap: 20px;
-    padding: 0;
-    height: 100vh;
+    /* height: 100; */
     display: grid;
     overflow: hidden;
     grid-template-columns: 20rem auto;

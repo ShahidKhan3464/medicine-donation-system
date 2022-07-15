@@ -70,10 +70,10 @@ const App = () => {
         <Route exact path='/ngo/profile' element={<NgoProfile />} />
 
         {/* ********ADMIN********* */}
-        <Route exact path='/admin/dashboard' element={<AdminDashboard />} />
+        <Route exact path='/admin/*' element={<AdminDashboard />} />
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

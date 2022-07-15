@@ -1,0 +1,13 @@
+.ngo-form {
+    margin: 3rem 0;
+}
+
+.ngo-form form {
+    width: 96%;
+    position: unset;
+    box-shadow: none;
+}
+
+.ngo-form form .form-group {
+    margin: 1rem 10rem 0rem 1rem;
+}

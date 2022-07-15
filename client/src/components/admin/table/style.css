@@ -18,13 +18,13 @@
     border: none;
 }
 
-.status {
-    padding: 8px;
-    border-radius: 9px;
-}
-
-.Details {
-    color: #00b5ff !important;
+.table button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: var(--mainWhite);
+    background: var(--primaryColor);
+    letter-spacing: var(--mainSpacing);
 }
 
 @media screen and (max-width: 1200px) {

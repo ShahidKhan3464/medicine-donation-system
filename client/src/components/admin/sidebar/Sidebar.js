@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { SidebarData } from "../data/Data";
 import { FaSignOutAlt } from 'react-icons/fa'
 import Logo from "../../../assets/images/logo.jpg";
 import "./style.css";
 
 const Sidebar = () => {
+    const navigate = useNavigate()
     const [selected, setSelected] = useState(0);
 
+    const handleMenuItem = (index, pathname) => {
+        setSelected(index);
+        navigate(pathname)
+    }
+
     return (
-        <div className="sidebar">
+        <aside className="sidebar">
             <div className="sidebar-logo">
                 <img src={Logo} alt="logo" />
                 <span>
@@ -21,13 +27,12 @@ const Sidebar = () => {
                 {SidebarData.map((item, index) => {
                     return (
                         <div
-                            className={selected === index ? "menuItem activeItem" : "menuItem"}
                             key={index}
-                            onClick={() => setSelected(index)}
+                            className={selected === index ? "menuItem activeItem" : "menuItem"}
+                            onClick={() => handleMenuItem(index, item.pathname)}
                         >
                             <item.icon style={{ fontSize: '1.4rem' }} />
                             <span>{item.heading}</span>
-                            {/* <Link to={item.pathname}>{item.heading}</Link> */}
                         </div>
                     );
                 })}
@@ -36,7 +41,7 @@ const Sidebar = () => {
                     <FaSignOutAlt />
                 </div>
             </div>
-        </div>
+        </aside>
     );
 };
 

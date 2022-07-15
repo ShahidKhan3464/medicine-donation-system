@@ -1,6 +1,8 @@
 .sidebar {
     display: flex;
-    padding-top: 4rem;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-top: 3rem;
     position: relative;
     flex-direction: column;
     background: var(--pink);

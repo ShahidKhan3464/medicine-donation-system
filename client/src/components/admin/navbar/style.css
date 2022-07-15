@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     border-bottom: none;
-    margin-bottom: 4rem;
     background: var(--mainWhite);
     box-shadow: var(--lightShadow);
     justify-content: space-between;
@@ -27,16 +26,9 @@
 }
 
 .Navbar-left svg {
-    width: 2rem;
-    height: 1.2rem;
     cursor: pointer;
-    margin-right: 1rem;
-    border-radius: 50%;
-    background: var(--mainBackground);
-}
-
-.Navbar-left svg:hover {
-    background: var(--mainWhite);
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
 }
 
 .Navbar-left img {
