@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate, Routes, Route } from "react-router-dom";
-import Navbar from "./navbar/Navbar";
-import Sidebar from "./sidebar/Sidebar";
 import MainDash from "./mainDash/MainDash";
-import Stock from "./stock/Stock";
-import Users from "./users/Users";
-import Ngos from "./ngos/Ngos";
+import Sidebar from "./sidebar/Sidebar";
+import Navbar from "./navbar/Navbar";
 import AddNgo from "./addNgo/AddNgo";
+import Stock from "./stock/Stock";
+import Users from "./users/index";
+import Ngos from "./ngos/index";
 import './style.css'
 
 const Index = () => {
