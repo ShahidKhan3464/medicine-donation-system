@@ -1,0 +1,58 @@
+/* *********Top********* */
+.top {
+    padding: 60px 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title h2 {
+    margin-bottom: 10px;
+    font-family: 'Lora', serif;
+    color: var(--headingColor);
+}
+
+.title .underline {
+    width: 10%;
+    height: 1px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: var(--bgColor);
+}
+
+.title p {
+    font-size: 16px;
+    color: #222222d1;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: var(--lightShadow);
+}
+
+.card .card-body {
+    padding: 0 30px;
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.card-body .card-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--headingColor);
+    font-weight: var(--mainWeight);
+    letter-spacing: var(--mainSpacing);
+}
+
+/* **********System Work********** */
+.system-work {
+    padding: 60px 0;
+    padding-bottom: 500px;
+}
+
+.system-work img {
+    filter: invert(2%);
+}

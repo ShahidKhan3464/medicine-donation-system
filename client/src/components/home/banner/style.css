@@ -1,0 +1,37 @@
+.carousel {
+    height: 100%;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel-caption {
+    top: 40%;
+}
+
+.carousel-caption h3 {
+    font-size: 33px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+h3 span {
+    color: var(--headingColor);
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: var(--mainWeight);
+    letter-spacing: var(--mainSpacing);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+}

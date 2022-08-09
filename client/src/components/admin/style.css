@@ -1,0 +1,38 @@
+.grid-container {
+    gap: 20px;
+    /* height: 100; */
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 20rem auto;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+/* Pagination */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-btn {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border-color: transparent;
+    background: var(--darkGrey);
+    transition: all 0.3s linear;
+}
+
+.btn-container .active-btn {
+    color: var(--mainWhite);
+    background: var(--primaryColor);
+}
+
+.prev-btn, .next-btn {
+    font-weight: bold;
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
