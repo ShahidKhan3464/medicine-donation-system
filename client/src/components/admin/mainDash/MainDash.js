@@ -8,6 +8,10 @@ import "./style.css";
 const MainDash = () => {
     const { loading, allData, allDonations } = useFetch();
 
+    // const updation = () => {
+    //     useFetch();
+    // }
+
     return (
         <>
             <main className="MainDash">
@@ -16,7 +20,7 @@ const MainDash = () => {
                     : <>
                         <h3>Dashboard</h3>
                         <Cards allData={allData} />
-                        <Table allDonations={allDonations} />
+                        <Table allDonations={allDonations} useFetch={useFetch} />
                     </>
                 }
             </main>

@@ -8,8 +8,9 @@ import axios from 'axios'
 import Modal from '../modal/Modal'
 import './style.css'
 
-const DonationTable = ({ allDonations }) => {
+const DonationTable = ({ allDonations, useFetch }) => {
     const { done, cancel } = Style
+    const [setLoad] = useFetch
     const [modal, setModal] = useState(false)
     const [loading, setLoading] = useState(false)
     const [medicine, setMedicine] = useState({})
@@ -24,7 +25,7 @@ const DonationTable = ({ allDonations }) => {
         setModal(true)
     }
 
-    const handleApprove = async (id) => {
+    const HandleApprove = async (id) => {
         try {
             setLoading(true)
             const { data, status } = await axios.patch(`http://localhost:3001/api/donation/approve/${id}`, {
@@ -38,6 +39,7 @@ const DonationTable = ({ allDonations }) => {
                     text: `${data.message}`
                 })
                 setLoading(false)
+                setLoad()
             }
         }
         catch (err) {
@@ -83,7 +85,7 @@ const DonationTable = ({ allDonations }) => {
                                             <button onClick={() => handleModal(donatedMedicine)}>Details</button>
                                         </td>
                                         <td>
-                                            <MdDone style={done} onClick={() => handleApprove(_id)} />
+                                            <MdDone style={done} onClick={() => HandleApprove(_id)} />
                                             <MdOutlineCancel style={cancel} />
                                         </td>
                                     </tr>
