@@ -1,21 +1,24 @@
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import { PrimaryHeading, Underline } from '../../globalStyle'
+import { Work } from './style'
 
-const Top = () => {
+const Index = () => {
 
     return (
-        <section className='system-work'>
-            <div className='title'>
-                <h2>How Does it Work</h2>
-                <div className="underline"></div>
+        <Work>
+            <div className='work_heading'>
+                <PrimaryHeading>How Does It Work</PrimaryHeading>
+                <Underline></Underline>
             </div>
             <Container>
                 <Row>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img src={require("..//..//..///images/registration.png")} />
+                            <Card.Img src={require("../../images/registration.png")} />
                             <Card.Body>
                                 <Card.Title>Registration</Card.Title>
                                 <Card.Text>
@@ -24,9 +27,9 @@ const Top = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img src={require("..//..//..///images/packing.png")} />
+                            <Card.Img src={require("../../images/packing.png")} />
                             <Card.Body>
                                 <Card.Title>Packing</Card.Title>
                                 <Card.Text>
@@ -35,9 +38,9 @@ const Top = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img src={require("..//..//..///images/delivery.png")} />
+                            <Card.Img src={require("../../images/delivery.png")} />
                             <Card.Body>
                                 <Card.Title>Delivery</Card.Title>
                                 <Card.Text>
@@ -48,8 +51,8 @@ const Top = () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </Work>
     )
 }
 
-export default Top
+export default Index

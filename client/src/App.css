@@ -48,7 +48,7 @@ body {
     background: var(--mainBackground) !important;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -68,10 +68,10 @@ p {
     font-size: 14px;
     line-height: 25px;
     letter-spacing: var(--mainSpacing);
-}
+} */
 
 /* ******Flex Form******* */
-.flex-container {
+/* .flex-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -142,4 +142,4 @@ p a {
     letter-spacing: var(--mainSpacing);
     color: var(--primaryColor) !important;
     font-weight: var(--mainWeight) !important;
-}
+} */

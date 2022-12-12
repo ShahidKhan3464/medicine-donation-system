@@ -20,7 +20,7 @@ const Header = ({ handleLogout }) => {
             <Navbar>
                 <Container>
                     <Link to="/user/homepage">
-                        <img src={require('../../../assets/images/logo.jpg')} className="logo" alt="logo" />
+                        <img src={require('../../..//images/logo.jpg')} className="logo" alt="logo" />
                         <span className='logo-text'>Medicine Donation</span>
                     </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

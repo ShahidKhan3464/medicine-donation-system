@@ -1,22 +1,25 @@
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import { PrimaryHeading, Underline } from '../../globalStyle'
+import { WhyDonate } from './style'
 
-const Top = () => {
+const Index = () => {
 
     return (
-        <section className='top'>
-            <div className='title'>
-                <h2>Why Donate to us</h2>
-                <div className="underline"></div>
+        <WhyDonate>
+            <div className='whyDonate_heading'>
+                <PrimaryHeading>Why Donate to us</PrimaryHeading>
+                <Underline></Underline>
                 <p>Because Health is the fundamental part of human being.</p>
             </div>
             <Container>
                 <Row>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img variant="top" src={require("..//..//..///images/serve.webp")} />
+                            <Card.Img variant="top" src={require("../../images/serve.webp")} />
                             <Card.Body>
                                 <Card.Title>Donate For Needy People</Card.Title>
                                 <Card.Text>
@@ -25,9 +28,9 @@ const Top = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img variant="top" src={require("..//..//..///images/health.jpg")} />
+                            <Card.Img variant="top" src={require("../../images/health.jpg")} />
                             <Card.Body>
                                 <Card.Title>Donate For Needy People</Card.Title>
                                 <Card.Text>
@@ -36,9 +39,9 @@ const Top = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col sm={12} md={6} lg={4}>
                         <Card>
-                            <Card.Img variant="top" src={require("..//..//..///images/saves.jpg")} />
+                            <Card.Img variant="top" src={require("../../images/saves.jpg")} />
                             <Card.Body>
                                 <Card.Title>Donate For Needy People</Card.Title>
                                 <Card.Text>
@@ -49,8 +52,8 @@ const Top = () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </WhyDonate>
     )
 }
 
-export default Top
+export default Index

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2'
-import usersPng from "../../../../assets/images/users.png";
-import ngosPng from "../../../../assets/images/ngos.png";
-import donationsPng from "../../../../assets/images/donations.png";
+import usersPng from "../../../..//images/users.png";
+import ngosPng from "../../../..//images/ngos.png";
+import donationsPng from "../../../..//images/donations.png";
 
 export const useFetch = () => {
     const [loading, setLoading] = useState(false);

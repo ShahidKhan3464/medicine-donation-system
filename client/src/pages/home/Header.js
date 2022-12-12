@@ -1,19 +1,19 @@
+import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css'
-import Button from 'react-bootstrap/Button';
+import logo from '../../images/logo.jpg'
+import { Header } from './style';
 
-const Header = () => {
+const index = () => {
 
     return (
-        <header>
-            <Navbar>
+        <Header>
+            <Navbar expand='lg'>
                 <Container>
-                    <Link to="/">
-                        <img src={require('../../..//images/logo.jpg')} className="logo" alt="logo" />
+                    <Link to="/" className='logo'>
+                        <img src={logo} className="logoImg" alt="logo" />
                         <span className='logo-text'>Medicine Donation</span>
                     </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,22 +24,26 @@ const Header = () => {
                             <NavLink to="/contact">Contact</NavLink>
                             <NavLink to="/faq">Faqs</NavLink>
                         </Nav>
-                        <div className="modules">
+                        <div className='links'>
+                            <Link to='/signin'>Sign In</Link>
+                            <Link to='/singup'>Sign Up</Link>
+                        </div>
+                        {/* <div className="modules">
                             <NavLink to="/user/login">User</NavLink>
                             <NavLink to="/ngo/login">Ngo</NavLink>
                             <NavLink to="/admin/login">Admin</NavLink>
-                        </div>
+                        </div> */}
                         {/* <Link to="/user/login">
                             <Button className="btn btn-warning">Sign In</Button>
                         </Link>
                         <Link to="/signup">
-                            <Button className="btn btn-warning">Sign Up</Button>
-                        </Link> */}
+                        <Button className="btn btn-warning">Sign Up</Button>
+                    </Link> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
+        </Header>
     )
 }
 
-export default Header
+export default index
