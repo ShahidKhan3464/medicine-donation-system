@@ -1,31 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
-
 // HOME
 import HomePage from './pages/home/index'
 import About from './pages/aboutUs/index';
 import Contact from './pages/contactUs/index';
-import User from './components/home/pages/User';
-import Ngo from './components/home/pages/Ngo';
-import Admin from './components/home/pages/Admin';
 import SignIn from './pages/signIn/index';
 import SignUp from './pages/signUp/index';
 
 // USER
-import UserHomepage from './components/donor/index';
-import DonateMedicine from './components/donor/donateMedicine/DonateMedicine';
-import DonateForm from './components/donor/donateForm/DonateForm';
-import MyDonations from './components/donor/myDonations/MyDonations';
-import UserProfile from './components/donor/profile/Profile';
+import Donor from './modules/donor/donorPage';
+// import DonateMedicine from './components/donor/donateMedicine/DonateMedicine';
+// import DonateForm from './components/donor/donateForm/DonateForm';
+// import MyDonations from './components/donor/myDonations/MyDonations';
+// import UserProfile from './components/donor/profile/Profile';
 
 // NGO
-import NgoHomepage from './components/ngo/index';
-import DonationList from './components/ngo/donationList/DonationList';
-import NgoProfile from './components/ngo/profile/Profile';
+// import NgoHomepage from './components/ngo/index';
+// import DonationList from './components/ngo/donationList/DonationList';
+// import NgoProfile from './components/ngo/profile/Profile';
 
 // Admin
-import AdminDashboard from './components/admin/index';
+// import AdminDashboard from './components/admin/index';
 
 const App = () => {
   // const [loggedIn, setLoggedIn] = useState(null);
@@ -50,18 +46,15 @@ const App = () => {
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/contact' element={<Contact />} />
-        {/* <Route exact path='/user/login' element={<User />} /> */}
-        {/* <Route exact path='/ngo/login' element={<Ngo />} /> */}
-        {/* <Route exact path='/admin/login' element={<Admin />} /> */}
         <Route exact path='/signin' element={<SignIn />} />
         <Route exact path='/signup' element={<SignUp />} />
 
         {/* *********USER***********/}
-        {/* <Route exact path='/user/homepage' element={<UserHomepage />} />
-        <Route exact path='/donateMedicine' element={<DonateMedicine />} />
-        <Route exact path='/donateForm' element={<DonateForm />} />
-        <Route exact path='/myDonations' element={<MyDonations />} />
-        <Route exact path='/user/profile' element={<UserProfile />} /> */}
+        <Route exact path='/donor/*' element={<Donor />} />
+        {/* <Route exact path='/donateMedicine' element={<DonateMedicine />} /> */}
+        {/* <Route exact path='/donateForm' element={<DonateForm />} /> */}
+        {/* <Route exact path='/myDonations' element={<MyDonations />} /> */}
+        {/* <Route exact path='/user/profile' element={<UserProfile />} /> */}
 
         {/* *********NGO********** */}
         {/* <Route exact path='/ngo/homepage' element={<NgoHomepage />} />

@@ -1,6 +1,5 @@
 import React from "react"
 import Form from "react-bootstrap/Form"
-// import Button from "react-bootstrap/Button"
 import Header from "../../components/header/index"
 import Footer from "../../components/footer/index"
 import Button from "../../components/button/index"
@@ -38,7 +37,6 @@ const Index = () => {
                                 <Form.Control as="textarea" name='message' rows={3} minLength='5' required />
                             </Form.Group>
 
-                            {/* <Button type="submit">Send a Message</Button> */}
                             <Button type="submit" text="Send a Message" />
                         </Form>
                     </div>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PrimaryColor, Mainbackground } from '../../globalStyle';
+import { PrimaryColor } from '../../globalStyle';
 
 export const ButtonStyle = styled.button`
     gap: 10px;
@@ -20,10 +20,4 @@ export const ButtonStyle = styled.button`
         width: 1.5rem !important;
         height: 1.5rem !important;
     }
-
-    // &:hover {
-    //     color: ${PrimaryColor} !important;
-    //     background: ${Mainbackground} !important;
-    //     border: 1px solid ${PrimaryColor} !important;
-    // }
 `

@@ -1,9 +1,8 @@
 import React from 'react'
-import Spinner from 'react-bootstrap/Spinner';
 import { ButtonStyle } from './style'
+import Spinner from 'react-bootstrap/Spinner';
 
 const Index = ({ loading, text }) => {
-    console.log('loading', loading)
 
     return (
         <ButtonStyle>

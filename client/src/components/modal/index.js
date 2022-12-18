@@ -1,26 +1,27 @@
+import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
+import { TableContainer } from '../../globalStyle'
 
-const MedicineModal = ({ modal, setModal, medicine }) => {
-
-    return (
-        <>
-            <Modal show={modal} onHide={() => setModal(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title id="example-modal-sizes-title-lg">
-                        Medicine Details
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Table striped bordered hover responsive className='Table'>
+const MedicineModal = ({ open, setOpen, medicine }) => (
+    <React.Fragment>
+        <Modal show={open} onHide={() => setOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title id="example-modal-sizes-title-lg">
+                    Medicine Details
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <TableContainer>
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Type</th>
                                 <th>Quantity</th>
-                                <th>Manufacture Date</th>
-                                <th>Expiry Date</th>
+                                <th>Mgf Date</th>
+                                <th>Exp Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,15 +34,15 @@ const MedicineModal = ({ modal, setModal, medicine }) => {
                             </tr>
                         </tbody>
                     </Table>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setModal(false)}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
-    )
-}
+                </TableContainer>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={() => setOpen(false)}>
+                    Close
+                </Button>
+            </Modal.Footer>
+        </Modal>
+    </React.Fragment >
+)
 
 export default MedicineModal

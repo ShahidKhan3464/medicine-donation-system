@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Bgcolor, HeadingColor, LightShadow, MainBorderColor, PrimaryColor, TextShadow } from '../../globalStyle';
 import heroSlider1 from '../../images/heroSlider1.jpg'
 import heroSlider2 from '../../images/heroSlider2.jpg'
+import { Bgcolor, Black, LightShadow, MainBorderColor, PrimaryColor, TextShadow } from '../../globalStyle';
 
 export const Header = styled.header`
     .navbar {
@@ -11,7 +11,6 @@ export const Header = styled.header`
 
         .navbar-toggler {
             @media screen and (max-width : 991px) { 
-                // padding: 3px 6px !important;
                 background: #FFFFFF !important;
                 border: none !important;    
                 outline: none !important;    
@@ -128,7 +127,7 @@ export const Hero = styled.div`
         }
 
         span {
-            color: ${HeadingColor};
+            color: ${Black};
         }
     }
 
@@ -249,7 +248,7 @@ export const WhyDonate = styled.div`
                 font-weight: 600;
                 margin-bottom: 15px;
                 letter-spacing: 1px;
-                color: ${HeadingColor};
+                color: ${Black};
             }
         }
     }
@@ -288,7 +287,7 @@ export const Work = styled.div`
                 font-weight: 600;
                 margin-bottom: 15px;
                 letter-spacing: 1px;
-                color: ${HeadingColor};
+                color: ${Black};
             }
         }
 

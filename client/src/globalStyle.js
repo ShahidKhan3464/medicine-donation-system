@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Pink = '#FF919D'
+export const Black = '#303030'
 export const DarkGrey = '#afafaf'
 export const PrimaryColor = '#5a9e0b'
-export const HeadingColor = '#303030'
 export const Mainbackground = '#f1f3f4'
 export const Bgcolor = 'rgb(8 10 10 / 85%)'
 export const TextShadow = '0 0 0.57rem #1d0505'
@@ -13,7 +13,7 @@ export const DarkShadow = '0 2px 10px 2px rgba(0, 0, 0, 0.3)'
 
 export const PrimaryHeading = styled.h6`
     font-size: 50px;
-    color: ${HeadingColor};
+    color: ${Black};
     font-family: 'Lora', serif;
     
     @media screen and (max-width : 520px) { 
@@ -48,8 +48,6 @@ export const FormContainer = styled.div`
 
         &_imgBox {
             width: 100%;
-            // height: 400px;
-            // max-width: 500px;
             height: ${props => props.height}px;
             max-width: ${props => props.maxWidth}px;
 
@@ -119,5 +117,56 @@ export const FormContainer = styled.div`
                 }
             }
         }
+    }
+`
+
+export const TableContainer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    border-radius: 5px;
+    @media screen and (max-width : 768px) { 
+        max-width: 600px;
+    }
+
+    @media screen and (max-width : 520px) { 
+        max-width: 300px;
+    }
+
+    th {
+        letter-spacing: 1px;
+        color: ${Black};
+        background: ${DarkGrey};
+    }
+
+    td, th {
+        padding: 8px;
+        letter-spacing: 1px;
+        border: 0.1rem solid ${MainBorderColor};
+    }
+
+    button {
+        border: none;
+        color: #FFFFFF;
+        padding: 5px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: ${PrimaryColor};
+        
+        @media screen and (max-width : 520px) { 
+            font-size: 14px;
+        }
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background: ${Mainbackground};
+    }
+
+    .approved {
+        color: #48a56d !important;
+    }
+
+    .not-approved {
+        color: red !important;
     }
 `

@@ -1,12 +1,12 @@
 import FadeLoader from "react-spinners/FadeLoader"
-import './style.css'
+import { Loader } from './style'
 
-const Loader = () => {
+const Index = () => {
     return (
-        <div className="loader">
+        <Loader>
             <FadeLoader loading="true" />
-        </div>
+        </Loader>
     )
 }
 
-export default Loader
+export default Index

@@ -58,7 +58,7 @@
     font-size: 14px;
     /* text-decoration: none; */
     letter-spacing: var(--mainSpacing);
-    color: var(--headingColor) !important;
+    color: var(--Black) !important;
 }
 
 .menuItem:hover {

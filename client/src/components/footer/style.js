@@ -15,6 +15,10 @@ export const Footer = styled.footer`
             padding: 70px 0;
             background: ${Bgcolor};
 
+            @media screen and (max-width : 520px) { 
+                padding: 40px 0;
+            }
+
             h6 {
                 font-size: 14px;
                 padding-bottom: 10px;
@@ -30,6 +34,10 @@ export const Footer = styled.footer`
                 margin-top: 30px;
                 list-style: none;
                 flex-direction: column;
+
+                @media screen and (max-width : 520px) { 
+                    margin-top: 20px;
+                }
 
                 a {
                     color: ${DarkGrey};

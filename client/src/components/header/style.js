@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Bgcolor, HeadingColor, LightShadow, MainBorderColor, PrimaryColor, TextShadow } from '../../globalStyle';
+import { Bgcolor, MainBorderColor, PrimaryColor, TextShadow } from '../../globalStyle';
 
 export const Header = styled.header`
     .navbar {
