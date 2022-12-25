@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { Hero } from './style'
+import { Hero } from './style';
 
 const Index = () => {
     const [width, setWidth] = useState(window.innerWidth);

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react"
-import { useNavigate, useLocation } from "react-router-dom"
-import axios from "axios"
-import Form from "react-bootstrap/Form"
-import Header from '../../../components/header/index';
-import Footer from '../../../components/footer/index';
-import Button from '../../../components/button/index';
-import sweetAlert from '../../../components/sweetAlert/index';
-import { PrimaryHeading, Underline } from "../../../globalStyle"
-import { DonateForm } from './style'
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
+import DonorLinks from "./donorLinks";
+import Form from "react-bootstrap/Form";
+import Footer from '../../../components/footer';
+import Button from '../../../components/button';
+import sweetAlert from '../../../components/sweetAlert';
+import { PrimaryHeading, Underline } from "../../../globalStyle";
+import { DonateForm } from './style';
 
 const Index = () => {
   const navigate = useNavigate()
@@ -61,7 +61,7 @@ const Index = () => {
 
   return (
     <React.Fragment>
-      <Header />
+      <DonorLinks />
       <DonateForm>
         <div className='donateForm_heading'>
           <PrimaryHeading>Donate Form</PrimaryHeading>

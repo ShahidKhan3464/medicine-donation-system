@@ -1,8 +1,8 @@
-import React from 'react'
-import Modal from 'react-bootstrap/Modal'
-import Table from 'react-bootstrap/Table'
-import Button from 'react-bootstrap/Button'
-import { TableContainer } from '../../globalStyle'
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import { TableContainer } from '../../globalStyle';
 
 const MedicineModal = ({ open, setOpen, medicine }) => (
     <React.Fragment>

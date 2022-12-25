@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react"
-import { BsSearch } from "react-icons/bs"
+import React, { useEffect, useState } from "react";
+import { BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
-import Table from 'react-bootstrap/Table'
-import Header from '../../../components/header/index';
-import Footer from '../../../components/footer/index';
-import Loader from '../../../components/loader/index';
-import sweetAlert from '../../../components/sweetAlert/index';
+import axios from "axios";
+import DonorLinks from "./donorLinks";
+import Table from 'react-bootstrap/Table';
+import Footer from '../../../components/footer';
+import Loader from '../../../components/loader';
+import sweetAlert from '../../../components/sweetAlert';
 import { TableContainer } from "../../../globalStyle";
-import { DonateMedicine } from './style'
+import { DonateMedicine } from './style';
 
 const Index = () => {
     const navigate = useNavigate()
@@ -49,7 +49,7 @@ const Index = () => {
 
     return (
         <React.Fragment>
-            <Header />
+            <DonorLinks />
             <DonateMedicine>
                 <div className="donateMedicine_search-field">
                     <label htmlFor="search">search location to find NGOs</label>

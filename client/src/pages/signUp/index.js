@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import Form from "react-bootstrap/Form"
-import Header from "../../components/header/index"
-import Footer from "../../components/footer/index"
-import Button from "../../components/button/index"
-import sweetAlert from "../../components/sweetAlert/index"
-import { FormContainer, PrimaryHeading, Underline } from "../../globalStyle"
-import { SignUp } from "./style"
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Form from "react-bootstrap/Form";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Button from "../../components/button";
+import sweetAlert from "../../components/sweetAlert";
+import { FormContainer, PrimaryHeading, Underline } from "../../globalStyle";
+import { SignUp } from "./style";
 
 const Index = () => {
     const [username, setUserName] = useState('')

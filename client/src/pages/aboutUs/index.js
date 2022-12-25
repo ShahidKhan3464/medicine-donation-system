@@ -1,11 +1,11 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Header from '../../components/header/index'
-import Footer from '../../components/footer/index'
-import { PrimaryHeading, Underline } from '../../globalStyle'
-import { About } from './style'
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+import { PrimaryHeading, Underline } from '../../globalStyle';
+import { About } from './style';
 
 const Index = () => {
 

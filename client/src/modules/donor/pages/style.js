@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import donor from '../../../images/donor.webp'
+import donor from '../../../images/donor.webp';
 import { Black, LightShadow, Mainbackground, PrimaryColor, TextShadow } from "../../../globalStyle";
 
 export const Banner = styled.div`

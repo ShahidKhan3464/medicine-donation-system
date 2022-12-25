@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import { PrimaryColor } from '../../globalStyle'
+import { PrimaryColor } from '../../globalStyle';
 
 const sweetalert = (icon = null, title = null, message = 'Error occured') => {
     return (

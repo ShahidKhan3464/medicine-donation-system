@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios'
-import Form from "react-bootstrap/Form"
-import Header from "../../components/header/index"
-import Footer from "../../components/footer/index"
-import Button from "../../components/button/index"
+import axios from 'axios';
+import Form from "react-bootstrap/Form";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Button from "../../components/button";
 import sweetAlert from "../../components/sweetAlert";
 import { PrimaryHeading, Underline, FormContainer } from "../../globalStyle";
-import { SignIn } from './style'
+import { SignIn } from './style';
 
 const Index = () => {
     const navigate = useNavigate()

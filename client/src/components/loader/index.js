@@ -1,5 +1,5 @@
-import FadeLoader from "react-spinners/FadeLoader"
-import { Loader } from './style'
+import FadeLoader from "react-spinners/FadeLoader";
+import { Loader } from './style';
 
 const Index = () => {
     return (

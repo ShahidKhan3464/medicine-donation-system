@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import DonorLinks from "./donorLinks";
+import NgoLinks from "./ngoLinks";
 import Table from 'react-bootstrap/Table';
 import Modal from '../../../components/modal';
 import Footer from '../../../components/footer';
@@ -10,7 +10,7 @@ import sweetAlert from '../../../components/sweetAlert';
 import { PrimaryHeading, TableContainer, Underline } from "../../../globalStyle";
 import { Donations } from './style';
 
-const MyDonations = () => {
+const DonationList = () => {
     const navigate = useNavigate()
     const [open, setOpen] = useState(false)
     const token = localStorage.getItem("token")
@@ -21,7 +21,7 @@ const MyDonations = () => {
     const donationList = useCallback(async () => {
         try {
             setLoading(true)
-            const { data, status } = await axios.get("http://localhost:3001/api/donation/mine", {
+            const { data, status } = await axios.get("http://localhost:3001/api/donation/tome", {
                 headers: { token }
             })
 
@@ -49,11 +49,11 @@ const MyDonations = () => {
 
     return (
         <React.Fragment>
-            <DonorLinks />
+            <NgoLinks />
             {open && <Modal open={open} setOpen={setOpen} medicine={medicine} />}
             <Donations>
                 <div className='donations_heading'>
-                    <PrimaryHeading>My Donations</PrimaryHeading>
+                    <PrimaryHeading>Donation List</PrimaryHeading>
                     <Underline></Underline>
                 </div>
                 {loading
@@ -62,10 +62,10 @@ const MyDonations = () => {
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>
-                                    <th>Ngo</th>
+                                    <th>Donor</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>City</th>
+                                    <th>Address</th>
                                     <th>Date</th>
                                     <th>Medicine</th>
                                     <th>Status</th>
@@ -81,12 +81,12 @@ const MyDonations = () => {
                                             No Donations Yet !!!
                                         </td>
                                     </tr>
-                                    : donations.map(({ _id, donatedMedicine, ngo, isApproved, date }) => (
-                                        <tr key={_id} >
-                                            <td>{ngo.name}</td>
-                                            <td>{ngo.email}</td>
-                                            <td>{ngo.phone}</td>
-                                            <td>{ngo.city}</td>
+                                    : donations.map(({ _id, donatedMedicine, donor, isApproved, date }) => (
+                                        <tr key={_id}>
+                                            <td>{donor.fullName}</td>
+                                            <td>{donor.email}</td>
+                                            <td>{donor.phone}</td>
+                                            <td>{donor.address}</td>
                                             <td>{new Date(date).toLocaleDateString('en-GB')}</td>
                                             <td>
                                                 <button onClick={() => handleModal(donatedMedicine)}>Details</button>
@@ -104,4 +104,4 @@ const MyDonations = () => {
     )
 }
 
-export default MyDonations
+export default DonationList

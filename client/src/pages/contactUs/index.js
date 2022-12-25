@@ -1,10 +1,10 @@
-import React from "react"
-import Form from "react-bootstrap/Form"
-import Header from "../../components/header/index"
-import Footer from "../../components/footer/index"
-import Button from "../../components/button/index"
-import { PrimaryHeading, Underline, FormContainer } from '../../globalStyle'
-import { Contact } from './style'
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Button from "../../components/button";
+import { PrimaryHeading, Underline, FormContainer } from '../../globalStyle';
+import { Contact } from './style';
 
 const Index = () => {
 

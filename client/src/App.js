@@ -10,6 +10,7 @@ import SignUp from './pages/signUp/index';
 
 // USER
 import Donor from './modules/donor/donorPage';
+import Ngo from './modules/ngo/ngoPage';
 // import DonateMedicine from './components/donor/donateMedicine/DonateMedicine';
 // import DonateForm from './components/donor/donateForm/DonateForm';
 // import MyDonations from './components/donor/myDonations/MyDonations';
@@ -57,9 +58,9 @@ const App = () => {
         {/* <Route exact path='/user/profile' element={<UserProfile />} /> */}
 
         {/* *********NGO********** */}
-        {/* <Route exact path='/ngo/homepage' element={<NgoHomepage />} />
-        <Route exact path='/donationList' element={<DonationList />} />
-        <Route exact path='/ngo/profile' element={<NgoProfile />} /> */}
+        <Route exact path='/ngo/*' element={<Ngo />} />
+        {/* <Route exact path='/donationList' element={<DonationList />} /> */}
+        {/* <Route exact path='/ngo/profile' element={<NgoProfile />} /> */}
 
         {/* ********ADMIN********* */}
         {/* <Route exact path='/admin/*' element={<AdminDashboard />} /> */}

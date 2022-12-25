@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import DonorLinks from './donorLinks';
+import NgoLinks from './ngoLinks';
 import Form from "react-bootstrap/Form";
 import Footer from '../../../components/footer';
 import Button from '../../../components/button';
@@ -11,25 +11,27 @@ import { Profile } from "./style";
 
 const Index = () => {
     const navigate = useNavigate()
+    const [name, setName] = useState('')
+    const [city, setCity] = useState('')
+    const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
-    const [address, setAddress] = useState('')
     const token = localStorage.getItem('token')
-    const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
 
-    const getUserData = useCallback(async () => {
+    const getNgoData = useCallback(async () => {
         try {
             setLoading(true)
-            const { data, status } = await axios.get('http://localhost:3001/api/user/profile', {
+            const { data, status } = await axios.get('http://localhost:3001/api/ngo/profile', {
                 headers: { token }
             })
 
             if (status === 200) {
                 setLoading(false)
-                setUserName(data.username)
+                setName(data.name)
                 setEmail(data.email)
-                setAddress(data.address)
+                setPhone(data.phone)
+                setCity(data.city)
             }
         }
         catch (err) {
@@ -41,10 +43,10 @@ const Index = () => {
 
     const updateProfile = async (e) => {
         e.preventDefault()
-        const updateData = { username, email, password, address }
+        const updateData = { name, email, password, phone, city }
         try {
             setLoading(true)
-            const { data, status } = await axios.put('http://localhost:3001/api/user/profile', updateData, {
+            const { data, status } = await axios.put('http://localhost:3001/api/ngo/profile', updateData, {
                 headers: { token }
             })
 
@@ -61,14 +63,14 @@ const Index = () => {
     }
 
     useEffect(() => {
-        if (!token) return navigate("signin")
-        getUserData()
-    }, [token, navigate, getUserData])
+        if (!token) return navigate("/signin")
+        getNgoData()
+    }, [token, navigate, getNgoData])
 
 
     return (
         <React.Fragment>
-            <DonorLinks />
+            <NgoLinks />
             <Profile>
                 <div className="profile_heading">
                     <PrimaryHeading>My Profile</PrimaryHeading>
@@ -81,12 +83,12 @@ const Index = () => {
                     <div className="formContainer_form">
                         <Form className='was-validated' onSubmit={updateProfile} >
                             <Form.Group>
-                                <Form.Label htmlFor="name">Username</Form.Label>
+                                <Form.Label htmlFor="name">Name</Form.Label>
                                 <Form.Control
                                     id="name"
                                     type="text"
-                                    value={username}
-                                    onChange={e => setUserName(e.target.value)}
+                                    value={name}
+                                    onChange={e => setName(e.target.value)}
                                 />
                             </Form.Group>
 
@@ -111,12 +113,22 @@ const Index = () => {
                             </Form.Group>
 
                             <Form.Group>
-                                <Form.Label htmlFor="address">Address</Form.Label>
+                                <Form.Label htmlFor="phone">Phone</Form.Label>
                                 <Form.Control
-                                    id="address"
+                                    id="phone"
+                                    type="number"
+                                    value={phone}
+                                    onChange={e => setPhone(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Label htmlFor="city">City</Form.Label>
+                                <Form.Control
+                                    id="city"
                                     type="text"
-                                    value={address}
-                                    onChange={e => setAddress(e.target.value)}
+                                    value={city}
+                                    onChange={e => setCity(e.target.value)}
                                 />
                             </Form.Group>
 

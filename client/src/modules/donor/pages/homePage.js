@@ -1,16 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../../components/footer';
 import Button from 'react-bootstrap/Button';
-import Header from '../../../components/header/index';
-import Footer from '../../../components/footer/index';
-import { Banner } from './style'
+import DonorLinks from './donorLinks';
+import { Banner } from './style';
 
 const HomePage = () => {
   const navigate = useNavigate()
 
   return (
     <React.Fragment>
-      <Header />
+      <DonorLinks />
       <Banner>
         <div className="banner_backgroundImage">
           <div className='banner_backgroundImage_content'>

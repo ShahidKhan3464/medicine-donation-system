@@ -170,3 +170,17 @@ export const TableContainer = styled.div`
         color: red !important;
     }
 `
+
+export const SignOutBtn = styled.button`
+    width: 90px;
+    height: 40px;
+    border: none;
+    display: flex;
+    outline: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background: ${PrimaryColor};                  
+`

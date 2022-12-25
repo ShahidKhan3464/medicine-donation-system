@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import heroSlider1 from '../../images/heroSlider1.jpg'
-import heroSlider2 from '../../images/heroSlider2.jpg'
+import heroSlider1 from '../../images/heroSlider1.jpg';
+import heroSlider2 from '../../images/heroSlider2.jpg';
 import { Bgcolor, Black, LightShadow, MainBorderColor, PrimaryColor, TextShadow } from '../../globalStyle';
 
 export const Header = styled.header`

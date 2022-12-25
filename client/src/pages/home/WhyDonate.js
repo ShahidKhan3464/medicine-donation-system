@@ -1,10 +1,10 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import { PrimaryHeading, Underline } from '../../globalStyle'
-import { WhyDonate } from './style'
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import { PrimaryHeading, Underline } from '../../globalStyle';
+import { WhyDonate } from './style';
 
 const Index = () => {
 
