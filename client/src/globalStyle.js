@@ -12,9 +12,9 @@ export const LightShadow = '0px 0px 10px rgba(0, 0, 0, 0.1)'
 export const DarkShadow = '0 2px 10px 2px rgba(0, 0, 0, 0.3)'
 
 export const PrimaryHeading = styled.h6`
-    font-size: 50px;
     color: ${Black};
     font-family: 'Lora', serif;
+    font-size: ${props => props.size ? props.size : '50px'};
     
     @media screen and (max-width : 520px) { 
         font-size: 35px;
@@ -134,8 +134,8 @@ export const TableContainer = styled.div`
     }
 
     th {
-        letter-spacing: 1px;
         color: ${Black};
+        letter-spacing: 1px;
         background: ${DarkGrey};
     }
 

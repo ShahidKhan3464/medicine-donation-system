@@ -11,6 +11,7 @@ import SignUp from './pages/signUp/index';
 // USER
 import Donor from './modules/donor/donorPage';
 import Ngo from './modules/ngo/ngoPage';
+import Admin from './modules/admin/adminPage';
 // import DonateMedicine from './components/donor/donateMedicine/DonateMedicine';
 // import DonateForm from './components/donor/donateForm/DonateForm';
 // import MyDonations from './components/donor/myDonations/MyDonations';
@@ -63,7 +64,7 @@ const App = () => {
         {/* <Route exact path='/ngo/profile' element={<NgoProfile />} /> */}
 
         {/* ********ADMIN********* */}
-        {/* <Route exact path='/admin/*' element={<AdminDashboard />} /> */}
+        <Route exact path='/admin/*' element={<Admin />} />
 
       </Routes>
       {/* <Footer /> */}

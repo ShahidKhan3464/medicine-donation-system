@@ -1,8 +1,8 @@
 import React from "react";
 import { useFetch } from './data/data'
-import Loader from "../../../components/loader/Loader";
-import Cards from "../cards/Cards";
-import Table from "../table/Table";
+// import Loader from "../../../components/loader/Loader";
+// import Cards from "../cards/Cards";
+// import Table from "../table/Table";
 import "./style.css";
 
 const MainDash = () => {
@@ -15,14 +15,15 @@ const MainDash = () => {
     return (
         <>
             <main className="MainDash">
-                {loading
+                hekeel
+                {/* {loading
                     ? <Loader />
                     : <>
                         <h3>Dashboard</h3>
                         <Cards allData={allData} />
                         <Table allDonations={allDonations} useFetch={useFetch} />
                     </>
-                }
+                } */}
             </main>
         </>
     );

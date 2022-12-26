@@ -10,6 +10,12 @@ body {
     font-family: 'Inter', sans-serif !important;
 }
 
+.sidebar-grid {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 330px auto;
+}
+
 .modal-dialog {
     width: 100%;
     max-width: 1050px;
