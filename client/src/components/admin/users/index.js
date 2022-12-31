@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import DisplayUsers from './displayUsers/DisplayUsers'
 import Pagination from './pagination/Pagination'
-import Loader from '../../loader/Loader'
+import Loader from '../../loader'
 import { useFetch } from './data/data'
 
 const Index = () => {

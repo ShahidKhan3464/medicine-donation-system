@@ -59,7 +59,7 @@ donationRoute.post('/', auth, async (req, res) => {
     }
 })
 
-donationRoute.patch('/approve/:id', async (req, res) => {
+donationRoute.put('/approve/:id', async (req, res) => {
     try {
         // const approveMedicine = await Donation.findById(req.params.id)
         // if (!approveMedicine) return res.status(404).send({ message: 'Donation not found' })

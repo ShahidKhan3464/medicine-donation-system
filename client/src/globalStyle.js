@@ -13,6 +13,7 @@ export const DarkShadow = '0 2px 10px 2px rgba(0, 0, 0, 0.3)'
 
 export const PrimaryHeading = styled.h6`
     color: ${Black};
+    letter-spacing: 1px;
     font-family: 'Lora', serif;
     font-size: ${props => props.size ? props.size : '50px'};
     

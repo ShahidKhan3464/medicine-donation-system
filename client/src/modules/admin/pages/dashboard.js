@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useCallback } from "react";
 import donationsIcon from "../../../images/donations.png";
+import sweetAlert from "../../../components/sweetAlert";
+import { PrimaryHeading } from "../../../globalStyle";
 import usersIcon from "../../../images/users.png";
 import ngosIcon from "../../../images/ngos.png";
-import sweetAlert from "../../../components/sweetAlert";
 import Loader from "../../../components/loader";
+import DashboardTable from "./dashboardTable";
 import Cards from "../cards";
-import Table from "../table";
-import { Dashboard } from './style';
-import { PrimaryHeading } from "../../../globalStyle";
+import axios from "axios";
 
 const Index = () => {
     const token = localStorage.getItem("token");
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [recentDonations, setRecentDonations] = useState([]);
     const [ngos, setNgos] = useState({ title: "Ngos", icon: ngosIcon, count: 0 });
     const [users, setUsers] = useState({ title: "Users", icon: usersIcon, count: 0 });
     const [donations, setDonations] = useState({ title: "Donations", icon: donationsIcon, count: 0 });
 
-    const loadData = async () => {
+    const loadData = useCallback(async () => {
         try {
             setLoading(true);
             const users = axios.get("http://localhost:3001/api/user", { headers: { token } });
@@ -38,23 +37,23 @@ const Index = () => {
             sweetAlert('error', 'Error!', `${err.response && err.response.data ? err.response.data.message : err.message}`);
             setLoading(false);
         }
-    }
+    }, [token])
 
     useEffect(() => {
         loadData();
-    }, []);
+    }, [loadData]);
 
     return (
-        <Dashboard>
+        <React.Fragment>
             {loading
                 ? <Loader />
                 : <>
                     <PrimaryHeading size="40px">Dashboard</PrimaryHeading>
                     <Cards users={users} ngos={ngos} donations={donations} />
-                    <Table recentDonations={recentDonations} loadData={loadData} />
+                    <DashboardTable recentDonations={recentDonations} loadData={loadData} />
                 </>
             }
-        </Dashboard>
+        </React.Fragment>
     );
 };
 

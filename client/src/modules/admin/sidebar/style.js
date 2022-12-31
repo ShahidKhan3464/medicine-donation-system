@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Pink, PrimaryColor, DarkGrey } from '../../../globalStyle';
 
 export const Sidebar = styled.aside`
-    display: flex;
     height: 100vh;
+    display: flex;
     grid-row-end: 3;
     grid-row-start: 1;
     padding-top: 3rem;

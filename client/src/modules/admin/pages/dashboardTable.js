@@ -2,18 +2,16 @@ import React, { useState } from 'react';
 import { PrimaryHeading, TableContainer } from '../../../globalStyle';
 import sweetAlert from "../../../components/sweetAlert";
 import { MdDone, MdCancel } from 'react-icons/md';
-import Button from '../../../components/button';
 import Modal from '../../../components/modal';
 import Table from 'react-bootstrap/Table';
 import { List } from './style';
 import axios from 'axios';
 
 const Index = ({ recentDonations, loadData }) => {
-    // const [setLoad] = useFetch
     const [open, setOpen] = useState(false)
     const token = localStorage.getItem('token')
     const [medicine, setMedicine] = useState({})
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
 
     // const medicineDetails = (donatedMedicine) => {
     //     navigate("/admin/medicine", { state: { medicine: donatedMedicine } })
@@ -26,21 +24,19 @@ const Index = ({ recentDonations, loadData }) => {
 
     const handleApprove = async (id) => {
         try {
-            setLoading(true)
-            const { data, status } = await axios.patch(`http://localhost:3001/api/donation/approve/${id}`, {
+            const { data, status } = await axios.put(`http://localhost:3001/api/donation/approve/${id}`, {
                 headers: { token }
             })
 
             if (status === 200) {
                 sweetAlert('success', 'Success', `${data.message}`);
-                setLoading(false)
                 loadData()
             }
         }
         catch (err) {
-            setLoading(true)
+            // setLoading(true)
             sweetAlert('error', 'Error!', `${err.response && err.response.data ? err.response.data.message : err.message}`);
-            setLoading(false)
+            // setLoading(false)
         }
     }
 
@@ -73,8 +69,8 @@ const Index = ({ recentDonations, loadData }) => {
                                     <button onClick={() => handleModal(donatedMedicine)}>Details</button>
                                 </td>
                                 <td>
-                                    {loading ? <Button type="button" text="" loading={loading} /> : <MdDone style={{ background: 'green' }} className='done' onClick={() => handleApprove(_id)} />}
-                                    <MdCancel style={{ color: 'red' }} className='cancel' />
+                                    <MdDone style={{ background: 'green' }} onClick={() => handleApprove(_id)} />
+                                    <MdCancel style={{ color: 'red' }} />
                                 </td>
                             </tr>
                         ))}
