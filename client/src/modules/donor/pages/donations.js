@@ -58,7 +58,7 @@ const MyDonations = () => {
                 </div>
                 {loading
                     ? <Loader />
-                    : <TableContainer>
+                    : <TableContainer maxWidth="1100">
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>
@@ -75,7 +75,7 @@ const MyDonations = () => {
                                 {donations.length === 0
                                     ? <tr>
                                         <td
-                                            colSpan='6'
+                                            colSpan='7'
                                             style={{ textAlign: 'center', color: 'red', fontWeight: 'bold' }}
                                         >
                                             No Donations Yet !!!

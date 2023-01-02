@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { DarkGrey, LightShadow } from '../../../globalStyle';
 
 export const Cards = styled.div`
-    gap: 30px;
+    gap: 55px;
     display: flex;
     margin-top: 20px;
 

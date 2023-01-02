@@ -23,6 +23,34 @@ body {
 
 .main {
     margin-top: 80px;
+    margin-right: 25px;
+}
+
+.offcanvas {
+    width: 350px;
+    border: none;
+    padding: 10px;
+    background: #FF919D;
+}
+
+.offcanvas .offcanvas-header div {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.offcanvas .offcanvas-header div span {
+    color: #5a9e0b;
+}
+
+@media screen and (max-width : 1200px) {
+    .sidebar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 0 30px;
+    }
 }
 
 @media screen and (max-width : 768px) {

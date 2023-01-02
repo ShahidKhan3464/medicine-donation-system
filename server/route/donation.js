@@ -42,6 +42,18 @@ donationRoute.get('/', auth, async (req, res) => {
     }
 })
 
+donationRoute.get('/approved', auth, async (req, res) => {
+    try {
+        const approvedMedicine = await Donation.find({ isApproved: true })
+        if (approvedMedicine) {
+            res.send(approvedMedicine)
+        }
+    }
+    catch (error) {
+        res.status(500).send({ message: error && error.message })
+    }
+})
+
 donationRoute.post('/', auth, async (req, res) => {
     try {
         const donation = new Donation({

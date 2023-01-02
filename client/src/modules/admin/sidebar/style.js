@@ -11,6 +11,9 @@ export const Sidebar = styled.aside`
     background: ${Pink};
     flex-direction: column;
     transition: all 300ms ease;
+    @media screen and (max-width : 1200px) { 
+        display: none;
+    }
 
     .sidebar {
         &_logo {

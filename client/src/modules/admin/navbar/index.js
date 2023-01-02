@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdNotificationsOutline } from 'react-icons/io';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import { MdSettings } from 'react-icons/md';
+import Offcanvas from '../mobileSidebar';
 import { Navbar } from './style';
 
 const Index = () => {
+    const [show, setShow] = useState(false);
 
     return (
         <Navbar>
+            <Offcanvas show={show} setShow={setShow} />
             <div className='navbar_right'>
+                <div className='navbar_right_bar-icon'>
+                    <button className="d-xl-none" onClick={() => setShow(true)}>
+                        <RxHamburgerMenu />
+                    </button>
+                </div>
                 <div className="navbar_right_input-field">
                     <input type='text' placeholder='Search' />
                     <BiSearch />

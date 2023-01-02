@@ -11,11 +11,6 @@ const Index = ({ recentDonations, loadData }) => {
     const [open, setOpen] = useState(false)
     const token = localStorage.getItem('token')
     const [medicine, setMedicine] = useState({})
-    // const [loading, setLoading] = useState(false)
-
-    // const medicineDetails = (donatedMedicine) => {
-    //     navigate("/admin/medicine", { state: { medicine: donatedMedicine } })
-    // }
 
     const handleModal = (donatedMedicine) => {
         setMedicine(donatedMedicine)
@@ -24,12 +19,14 @@ const Index = ({ recentDonations, loadData }) => {
 
     const handleApprove = async (id) => {
         try {
+            // setLoading(true)
             const { data, status } = await axios.put(`http://localhost:3001/api/donation/approve/${id}`, {
                 headers: { token }
             })
 
             if (status === 200) {
                 sweetAlert('success', 'Success', `${data.message}`);
+                // setLoading(false)
                 loadData()
             }
         }
@@ -50,7 +47,7 @@ const Index = ({ recentDonations, loadData }) => {
                         <tr>
                             <th>Donor</th>
                             <th>Email</th>
-                            <th>Phone</th>
+                            {/* <th>Phone</th> */}
                             <th>Address</th>
                             <th>Date</th>
                             <th>Medicine</th>
@@ -58,22 +55,31 @@ const Index = ({ recentDonations, loadData }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {recentDonations.map(({ _id, donor, donatedMedicine, date }) => (
-                            <tr key={_id}>
-                                <td>{donor.fullName}</td>
-                                <td>{donor.email}</td>
-                                <td>{donor.phone}</td>
-                                <td>{donor.address}</td>
-                                <td>{new Date(date).toLocaleDateString('en-GB')}</td>
-                                <td>
-                                    <button onClick={() => handleModal(donatedMedicine)}>Details</button>
-                                </td>
-                                <td>
-                                    <MdDone style={{ background: 'green' }} onClick={() => handleApprove(_id)} />
-                                    <MdCancel style={{ color: 'red' }} />
+                        {recentDonations.length === 0
+                            ? <tr>
+                                <td
+                                    colSpan='7'
+                                    style={{ textAlign: 'center', color: 'red', fontWeight: 'bold', paddingTop: '20px' }}
+                                >
+                                    No Donations Made Yet !!!
                                 </td>
                             </tr>
-                        ))}
+                            : recentDonations.map(({ _id, donor, donatedMedicine, date }) => (
+                                <tr key={_id}>
+                                    <td>{donor.fullName}</td>
+                                    <td>{donor.email}</td>
+                                    {/* <td>{donor.phone}</td> */}
+                                    <td>{donor.address}</td>
+                                    <td>{new Date(date).toLocaleDateString('en-GB')}</td>
+                                    <td>
+                                        <button onClick={() => handleModal(donatedMedicine)}>Details</button>
+                                    </td>
+                                    <td>
+                                        <MdDone style={{ background: 'green' }} onClick={() => handleApprove(_id)} />
+                                        <MdCancel style={{ color: 'red' }} />
+                                    </td>
+                                </tr>
+                            ))}
                     </tbody>
                 </Table>
             </TableContainer>

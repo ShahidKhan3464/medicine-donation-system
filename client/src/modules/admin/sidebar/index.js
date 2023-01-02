@@ -1,5 +1,5 @@
 import React from "react";
-import { links } from "./data";
+import { links } from "../sidebarData";
 import { useNavigate } from 'react-router-dom';
 import { FaSignOutAlt } from 'react-icons/fa';
 import logo from "../../..//images/logo.jpg";

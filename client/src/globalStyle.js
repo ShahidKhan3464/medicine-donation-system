@@ -12,6 +12,7 @@ export const LightShadow = '0px 0px 10px rgba(0, 0, 0, 0.1)'
 export const DarkShadow = '0 2px 10px 2px rgba(0, 0, 0, 0.3)'
 
 export const PrimaryHeading = styled.h6`
+    margin: 0;
     color: ${Black};
     letter-spacing: 1px;
     font-family: 'Lora', serif;
@@ -124,8 +125,8 @@ export const FormContainer = styled.div`
 export const TableContainer = styled.div`
     width: 100%;
     margin: 0 auto;
-    max-width: 1100px;
     border-radius: 5px;
+    max-width: ${props => props.maxWidth && props.maxWidth}px;
     @media screen and (max-width : 768px) { 
         max-width: 600px;
     }

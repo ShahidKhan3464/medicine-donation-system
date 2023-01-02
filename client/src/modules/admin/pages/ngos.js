@@ -49,49 +49,52 @@ const Index = () => {
     }, [getNgos])
 
     return (
-        <List>
-            {loading
-                ? <Loader />
-                : <>
-                    <PrimaryHeading size="25px">Ngos Details</PrimaryHeading>
-                    <TableContainer>
-                        <Table responsive>
-                            <thead>
-                                <tr>
-                                    <th>Ngo</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>City</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {currentNgos.map((ngo, index) => (
-                                    <tr key={index + 1}>
-                                        <td>{ngo.name}</td>
-                                        <td>{ngo.email}</td>
-                                        <td>{ngo.phone}</td>
-                                        <td>{ngo.city}</td>
-                                        <td>
-                                            <FaTrash style={{ color: 'red' }} />
-                                            <FaEdit style={{ color: 'green' }} />
-                                        </td>
+        <>
+            <PrimaryHeading size="40px">View Ngos</PrimaryHeading>
+            <List>
+                {loading
+                    ? <Loader />
+                    : <>
+                        <PrimaryHeading size="25px">Ngos Details</PrimaryHeading>
+                        <TableContainer>
+                            <Table responsive>
+                                <thead>
+                                    <tr>
+                                        <th>Ngo</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>City</th>
+                                        <th>Actions</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </Table>
-                    </TableContainer>
-                    <Pagination
-                        itemsPerPage={ngosPerPage}
-                        totalItems={ngos.length}
-                        prevPage={prevPage}
-                        nextPage={nextPage}
-                        paginate={paginate}
-                        page={currentPage}
-                    />
-                </>
-            }
-        </List>
+                                </thead>
+                                <tbody>
+                                    {currentNgos.map((ngo, index) => (
+                                        <tr key={index + 1}>
+                                            <td>{ngo.name}</td>
+                                            <td>{ngo.email}</td>
+                                            <td>{ngo.phone}</td>
+                                            <td>{ngo.city}</td>
+                                            <td>
+                                                <FaTrash style={{ color: 'red' }} />
+                                                <FaEdit style={{ color: 'green' }} />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>
+                        </TableContainer>
+                        <Pagination
+                            itemsPerPage={ngosPerPage}
+                            totalItems={ngos.length}
+                            prevPage={prevPage}
+                            nextPage={nextPage}
+                            paginate={paginate}
+                            page={currentPage}
+                        />
+                    </>
+                }
+            </List>
+        </>
     )
 }
 

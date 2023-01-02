@@ -66,7 +66,7 @@ const Index = () => {
                 </div>
                 {loading
                     ? <Loader />
-                    : ngos.length !== 0 && <TableContainer>
+                    : ngos.length !== 0 && <TableContainer maxWidth="1100">
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>

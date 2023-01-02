@@ -85,4 +85,16 @@ userRoute.put('/profile', auth, async (req, res) => {
     }
 })
 
+userRoute.delete('/delete/:id', auth, async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.params.id)
+        if (user) {
+            res.send({ message: 'Successfully deleted the user' })
+        }
+    }
+    catch (error) {
+        res.status(500).send({ message: error && error.message })
+    }
+})
+
 module.exports = userRoute

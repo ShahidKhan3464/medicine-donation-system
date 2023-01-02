@@ -26,13 +26,17 @@ const Index = () => {
                     password: password
                 })
 
-                if (status === 200) {
+                if (status === 200 && select === 'user') {
                     localStorage.setItem('token', data.token)
-                    localStorage.setItem('isAdmin', data.isAdmin)
                     localStorage.setItem('user', JSON.stringify(data.user))
                     setLoading(false)
                     navigate("/donor")
+                    return
                 }
+                localStorage.setItem('token', data.token)
+                localStorage.setItem('isAdmin', data.isAdmin)
+                setLoading(false)
+                navigate("/admin/dashboard")
             }
 
             else if (select === 'ngo') {

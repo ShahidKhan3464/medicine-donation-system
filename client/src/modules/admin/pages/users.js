@@ -28,7 +28,27 @@ const Index = () => {
         if (currentPage < Math.ceil(users.length / usersPerPage)) setCurrentPage(currentPage + 1)
     }
 
-    const getUsers = useCallback(async () => {
+    const handleDelete = async (id) => {
+        try {
+            setLoading(true)
+            const { data, status } = await axios.delete(`http://localhost:3001/api/user/delete/${id}`, {
+                headers: { token }
+            })
+
+            if (status === 200) {
+                sweetAlert('success', 'Success', `${data.message}`);
+                setLoading(false)
+                // loadData()
+            }
+        }
+        catch (err) {
+            setLoading(true)
+            sweetAlert('error', 'Error!', `${err.response && err.response.data ? err.response.data.message : err.message}`);
+            setLoading(false)
+        }
+    }
+
+    const getUsers = async () => {
         try {
             setLoading(true)
             const { data } = await axios.get('http://localhost:3001/api/user', {
@@ -42,54 +62,57 @@ const Index = () => {
             sweetAlert('error', 'Error!', `${err.response && err.response.data ? err.response.data.message : err.message}`);
             setLoading(false)
         }
-    }, [token])
+    }
 
     useEffect(() => {
         getUsers()
-    }, [getUsers])
+    }, [])
 
     return (
-        <List>
-            {loading
-                ? <Loader />
-                : <>
-                    <PrimaryHeading size="25px">Users Details</PrimaryHeading>
-                    <TableContainer>
-                        <Table responsive>
-                            <thead>
-                                <tr>
-                                    <th>Username</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {currentUsers.map((user, index) => (
-                                    <tr key={index + 1}>
-                                        <td>{user.username}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.address}</td>
-                                        <td>
-                                            <FaTrash style={{ color: 'red' }} />
-                                            <FaEdit style={{ color: 'green' }} />
-                                        </td>
+        <>
+            <PrimaryHeading size="40px">View Users</PrimaryHeading>
+            <List>
+                {loading
+                    ? <Loader />
+                    : <>
+                        <PrimaryHeading size="25px">Users Details</PrimaryHeading>
+                        <TableContainer>
+                            <Table responsive>
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Actions</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </Table>
-                    </TableContainer>
-                    <Pagination
-                        itemsPerPage={usersPerPage}
-                        totalItems={users.length}
-                        prevPage={prevPage}
-                        nextPage={nextPage}
-                        paginate={paginate}
-                        page={currentPage}
-                    />
-                </>
-            }
-        </List>
+                                </thead>
+                                <tbody>
+                                    {currentUsers.map((user, index) => (
+                                        <tr key={user._id}>
+                                            <td>{user.username}</td>
+                                            <td>{user.email}</td>
+                                            <td>{user.address}</td>
+                                            <td>
+                                                <FaTrash onClick={() => handleDelete(user._id)} style={{ color: 'red' }} />
+                                                <FaEdit style={{ color: 'green' }} />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>
+                        </TableContainer>
+                        <Pagination
+                            itemsPerPage={usersPerPage}
+                            totalItems={users.length}
+                            prevPage={prevPage}
+                            nextPage={nextPage}
+                            paginate={paginate}
+                            page={currentPage}
+                        />
+                    </>
+                }
+            </List>
+        </>
     )
 }
 

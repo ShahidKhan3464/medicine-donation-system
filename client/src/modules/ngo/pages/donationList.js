@@ -58,7 +58,7 @@ const DonationList = () => {
                 </div>
                 {loading
                     ? <Loader />
-                    : <TableContainer>
+                    : <TableContainer maxWidth="1100">
                         <Table striped bordered hover responsive>
                             <thead>
                                 <tr>

@@ -13,6 +13,21 @@ export const Navbar = styled.nav`
 
     .navbar {
         &_right {
+            @media screen and (max-width : 1200px) { 
+                width: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &_bar-icon {
+                    button {
+                        border: none;
+                        outline: none;
+                        font-size: 25px;
+                        background: transparent;
+                    }
+                }
+            }
             &_input-field {
                 position: relative;
                 input {
