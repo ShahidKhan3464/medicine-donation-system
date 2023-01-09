@@ -5,11 +5,17 @@ export const Cards = styled.div`
     gap: 55px;
     display: flex;
     margin-top: 20px;
+    @media screen and (max-width : 1024px) { 
+        flex-wrap: wrap;
+    }
 
     .cards {
         &_container {
             width: 100%;
             max-width: 350px;
+            @media screen and (max-width : 520px) { 
+                max-width: 280px;
+            }
 
             &_card {
                 display: flex;

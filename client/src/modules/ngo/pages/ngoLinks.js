@@ -14,9 +14,9 @@ const ngoLinks = () => {
     return (
         <Header>
             <Nav className="me-auto">
-                <NavLink to="/ngo">Home</NavLink>
-                <NavLink to="/ngo/donationList">Donation list</NavLink>
-                <NavLink to="/ngo/profile">Profile</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/ngo">Home</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/ngo/donationList">Donation list</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/ngo/profile">Profile</NavLink>
             </Nav>
             <SignOutBtn onClick={handleSignOut}>
                 Sign Out

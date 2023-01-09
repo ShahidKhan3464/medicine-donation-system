@@ -9,6 +9,12 @@ export const List = styled.div`
     background: #FFFFFF;
     border-radius: 10px;
     flex-direction: column;
+    @media screen and (max-width : 520px) { 
+        width: 100%;
+        margin: 25px 0;
+        max-width: 320px;
+    }
+
 
     .table {
         tbody tr:nth-of-type(odd) {
@@ -21,7 +27,7 @@ export const List = styled.div`
 
         td, th {
             border: none;
-            padding: 10px 0px;
+            // padding: 10px 0px;
             background: transparent;
         }
 
@@ -40,6 +46,9 @@ export const List = styled.div`
             font-size: 20px;
             cursor: pointer;
             border-radius: 50%;
+            @media screen and (max-width : 768px) { 
+                margin: 0 5px;
+            }
         }
 
         .approved {

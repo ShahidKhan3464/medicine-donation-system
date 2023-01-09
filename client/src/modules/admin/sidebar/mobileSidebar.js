@@ -3,6 +3,7 @@ import { links } from "../sidebarData";
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Sidebar } from './style';
 
 const Index = ({ show, setShow }) => {
     const navigate = useNavigate()
@@ -14,21 +15,26 @@ const Index = ({ show, setShow }) => {
     }
 
     return (
-        <React.Fragment>
+        <Sidebar>
             <Offcanvas show={show} onHide={() => setShow(false)}>
                 <Offcanvas.Header closeButton>
-                    <div>
+                    {/* <div>
                         Medicine<span> Donation</span>
+                    </div> */}
+                    <div className="sidebar_logo">
+                        <span>
+                            Medicine<span> Donation</span>
+                        </span>
                     </div>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <div className="sidebar-menu">
+                    <div className="sidebar_menu">
                         {links.map((link, index) => {
                             return (
                                 <div
                                     key={index}
                                     onClick={() => navigate(link.pathname)}
-                                    className={location === link.name ? "sidebar-menu-item active-item" : "sidebar-menu-item"}
+                                    className={location === link.name ? "sidebar_menu_item active-item" : "sidebar_menu_item"}
                                 >
                                     <link.icon />
                                     <span>{link.name}</span>
@@ -36,13 +42,13 @@ const Index = ({ show, setShow }) => {
                             );
                         })}
 
-                        <div className="sidebar-menu-item">
+                        <div className="sidebar_menu_item">
                             <FaSignOutAlt onClick={handleSignOut} />
                         </div>
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>
-        </React.Fragment>
+        </Sidebar>
     )
 }
 

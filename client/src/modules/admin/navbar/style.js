@@ -10,6 +10,13 @@ export const Navbar = styled.nav`
     box-shadow: ${LightShadow};
     border-radius: 10px 0 0 10px;
     justify-content: space-between;
+    @media screen and (max-width : 1200px) { 
+        border-radius: 0px;
+    }
+
+    @media screen and (max-width : 520px) { 
+        padding: 0 15px;
+    }
 
     .navbar {
         &_right {
@@ -30,6 +37,9 @@ export const Navbar = styled.nav`
             }
             &_input-field {
                 position: relative;
+                @media screen and (max-width : 1024px) { 
+                    display: none;
+                }
                 input {
                     border: none;
                     outline: none;
@@ -58,12 +68,19 @@ export const Navbar = styled.nav`
                 svg {
                     cursor: pointer;
                     font-size: 25px;
+                    @media screen and (max-width : 520px) { 
+                        font-size: 20px;
+                    }
                 }
                 img {
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
                     object-fit: contain;
+                    @media screen and (max-width : 1024px) { 
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
         }

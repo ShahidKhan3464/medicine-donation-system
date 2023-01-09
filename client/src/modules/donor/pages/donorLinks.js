@@ -14,10 +14,10 @@ const donorLinks = () => {
     return (
         <Header>
             <Nav className="me-auto">
-                <NavLink to="/donor">Home</NavLink>
-                <NavLink to="/donor/donateMedicine">Donate Medicine</NavLink>
-                <NavLink to="/donor/donations">My Donations</NavLink>
-                <NavLink to="/donor/profile">Profile</NavLink>
+                <NavLink activeclassname="active" to="/donor">Home</NavLink>
+                <NavLink activeclassname="active" to="/donor/donateMedicine">Donate Medicine</NavLink>
+                <NavLink activeclassname="active" to="/donor/donations">My Donations</NavLink>
+                <NavLink activeclassname="active" to="/donor/profile">Profile</NavLink>
             </Nav>
             <SignOutBtn onClick={handleSignOut}>
                 Sign Out

@@ -72,6 +72,10 @@ export const Header = styled.header`
                 margin-bottom: 30px;
             }
 
+            .active, a:hover {
+                color: ${PrimaryColor};
+            }
+
         }
 
 
@@ -101,10 +105,6 @@ export const Header = styled.header`
                     color: #FFFFFF;
                 }
             }
-        }
-
-        .navbar .active, a:hover {
-            color: ${PrimaryColor};
         }
     }
 `

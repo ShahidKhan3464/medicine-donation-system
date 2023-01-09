@@ -169,7 +169,7 @@ export const DonateForm = styled.section`
             }
 
             &_detail {
-                padding: 32px;
+                padding: 32px;  
                 @media screen and (max-width : 520px) { 
                     padding: 16px;
                 }
@@ -216,6 +216,52 @@ export const DonateForm = styled.section`
                                     background: ${Mainbackground} !important;
                                 }
                             }
+                        }
+
+                        &_browseImage_shown {
+                            gap: 12px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-top: 16px;
+                            margin-bottom: 21px;
+                
+                            &_imgBox {
+                                position: relative;
+
+                                .image {
+                                    width: 112px;
+                                    height: 96px;
+                                }
+
+                                .filledCrossIcon {
+                                    top: -5px;
+                                    right: -5px;
+                                    width: 16px;
+                                    height: 16px;
+                                    cursor: pointer;
+                                    position: absolute;
+                                }
+                            }   
+                        }
+
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+                        }
+            
+                        .upload-file {
+                            width: 100px;
+                            height: 90px;
+                            display: flex;
+                            cursor: pointer;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgb(245, 245, 245);
+                        }
+            
+                        .file-input {
+                            display: none;
                         }
                     }
                 }

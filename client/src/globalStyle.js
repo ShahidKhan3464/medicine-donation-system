@@ -19,7 +19,7 @@ export const PrimaryHeading = styled.h6`
     font-size: ${props => props.size ? props.size : '50px'};
     
     @media screen and (max-width : 520px) { 
-        font-size: 35px;
+        font-size: ${props => props.size ? props.size : '30px'};
     }
 `
 

@@ -11,9 +11,11 @@ const Index = ({ recentDonations, loadData }) => {
     const [open, setOpen] = useState(false)
     const token = localStorage.getItem('token')
     const [medicine, setMedicine] = useState({})
+    const [viewImages, setViewImages] = useState([])
 
-    const handleModal = (donatedMedicine) => {
+    const handleModal = (donatedMedicine, images) => {
         setMedicine(donatedMedicine)
+        setViewImages(images)
         setOpen(true)
     }
 
@@ -39,7 +41,7 @@ const Index = ({ recentDonations, loadData }) => {
 
     return (
         <List>
-            {open && <Modal open={open} setOpen={setOpen} medicine={medicine} />}
+            {open && <Modal open={open} setOpen={setOpen} medicine={medicine} images={viewImages} />}
             <PrimaryHeading size="25px">Recent Donations</PrimaryHeading>
             <TableContainer>
                 <Table responsive>
@@ -47,7 +49,6 @@ const Index = ({ recentDonations, loadData }) => {
                         <tr>
                             <th>Donor</th>
                             <th>Email</th>
-                            {/* <th>Phone</th> */}
                             <th>Address</th>
                             <th>Date</th>
                             <th>Medicine</th>
@@ -64,15 +65,14 @@ const Index = ({ recentDonations, loadData }) => {
                                     No Donations Made Yet !!!
                                 </td>
                             </tr>
-                            : recentDonations.map(({ _id, donor, donatedMedicine, date }) => (
+                            : recentDonations.map(({ _id, donor, donatedMedicine, images, date }) => (
                                 <tr key={_id}>
                                     <td>{donor.fullName}</td>
                                     <td>{donor.email}</td>
-                                    {/* <td>{donor.phone}</td> */}
                                     <td>{donor.address}</td>
                                     <td>{new Date(date).toLocaleDateString('en-GB')}</td>
                                     <td>
-                                        <button onClick={() => handleModal(donatedMedicine)}>Details</button>
+                                        <button onClick={() => handleModal(donatedMedicine, images)}>Details</button>
                                     </td>
                                     <td>
                                         <MdDone style={{ background: 'green' }} onClick={() => handleApprove(_id)} />

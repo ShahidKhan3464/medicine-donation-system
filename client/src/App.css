@@ -27,7 +27,7 @@ body {
 }
 
 .offcanvas {
-    width: 350px;
+    width: 280px;
     border: none;
     padding: 10px;
     background: #FF919D;
@@ -43,6 +43,49 @@ body {
     color: #5a9e0b;
 }
 
+.offcanvas-header .btn-close {
+    padding: 0px;
+}
+
+.offcanvas .offcanvas-body .sidebar-menu {
+    gap: 25px;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.sidebar-menu .sidebar-menu-item {
+    gap: 15px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+.sidebar-menu-item svg {
+    font-size: 22px;
+}
+
+.sidebar-menu-item span {
+    text-transform: capitalize;
+}
+
+.sidebar-menu .active-item {
+    margin-left: 0;
+    background: #afafaf;
+}
+
+.sidebar-menu .active-item::before {
+    width: 7px;
+    content: "";
+    height: 100%;
+    background: #5a9e0b;
+    margin-right: calc(15px - 7px);
+}
+
 @media screen and (max-width : 1200px) {
     .sidebar-grid {
         grid-template-columns: 1fr;
@@ -53,15 +96,31 @@ body {
     }
 }
 
+/* @media screen and (max-width : 1024px) {
+    .main {
+        width: 100%;
+        max-width: 650px;
+    }
+} */
+
 @media screen and (max-width : 768px) {
     .modal-dialog {
         max-width: 700px;
+    }
+
+    .main {
+        margin-right: 0px;
     }
 }
 
 @media screen and (max-width : 520px) {
     .modal-dialog {
         max-width: 300px;
+    }
+
+    .main {
+        padding: 0 15px;
+        margin-top: 40px;
     }
 }
 

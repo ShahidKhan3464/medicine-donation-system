@@ -53,7 +53,7 @@ const Index = () => {
                 }
             }
             else {
-                sweetAlert('warning', 'Warning!', 'Select are required')
+                sweetAlert('warning', 'Warning!', 'Select value is required')
                 setLoading(false)
             }
         }

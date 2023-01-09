@@ -23,10 +23,10 @@ const index = ({ children }) => {
                             : (
                                 <>
                                     <Nav className="me-auto">
-                                        <NavLink to="/">Home</NavLink>
-                                        <NavLink to="/about">About</NavLink>
-                                        <NavLink to="/contact">Contact</NavLink>
-                                        <NavLink to="/faq">Faqs</NavLink>
+                                        <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">Home</NavLink>
+                                        <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/about">About</NavLink>
+                                        <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">Contact</NavLink>
+                                        {/* <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/faq">Faqs</NavLink> */}
                                     </Nav>
                                     <div className='links'>
                                         <Link to='/signin'>Sign In</Link>

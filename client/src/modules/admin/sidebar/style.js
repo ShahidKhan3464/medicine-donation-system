@@ -60,6 +60,7 @@ export const Sidebar = styled.aside`
                 }
 
                 span {
+                    font-size: 18px;
                     text-transform: capitalize;
                 }
             }

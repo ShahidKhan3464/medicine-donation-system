@@ -13,6 +13,7 @@ export const ButtonStyle = styled.button`
     align-items: center;
     justify-content: center;
     border: none !important;
+    outline: none !important;
     border-radius: 5px !important;
     background: ${PrimaryColor} !important;
 
