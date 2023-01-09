@@ -58,6 +58,7 @@ donationRoute.post('/', auth, async (req, res) => {
     try {
         const donation = new Donation({
             donatedMedicine: req.body.medicine,
+            // images: req.body.images,
             donor: req.body.donor,
             ngo: req.body.ngoId,
             user: req.rootUser._id

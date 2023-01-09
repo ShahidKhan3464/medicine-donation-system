@@ -18,6 +18,14 @@ app.use('/api/user', adminRoute)
 app.use('/api/ngo', ngoRoute)
 app.use('/api/donation', donationRoute)
 
-mongoose.connect(process.env.DB_CONNECT, () => console.log('Connected to DB'))
+const connectDatabase = async () => {
+    try {
+        await mongoose.connect(process.env.DB_CONNECT, () => console.log('Connected to DB'))
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+connectDatabase()
 
 app.listen(port, () => console.log(`listening to the given port no ${port}`))
