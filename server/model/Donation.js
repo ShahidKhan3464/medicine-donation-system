@@ -16,8 +16,6 @@ const donationSchema = new mongoose.Schema({
         address: { type: String, required: true },
     },
 
-    // images: { type: Array, default: false },
-
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     ngo: { type: mongoose.Schema.Types.ObjectId, required: true },
     isApproved: { type: Boolean, default: false },

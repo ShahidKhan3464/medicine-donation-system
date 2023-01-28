@@ -72,7 +72,8 @@ export const Header = styled.header`
                 margin-bottom: 30px;
             }
 
-            .active, a:hover {
+            // .active, 
+            a:hover {
                 color: ${PrimaryColor};
             }
 

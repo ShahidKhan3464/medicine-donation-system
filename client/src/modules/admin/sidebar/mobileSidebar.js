@@ -18,9 +18,6 @@ const Index = ({ show, setShow }) => {
         <Sidebar>
             <Offcanvas show={show} onHide={() => setShow(false)}>
                 <Offcanvas.Header closeButton>
-                    {/* <div>
-                        Medicine<span> Donation</span>
-                    </div> */}
                     <div className="sidebar_logo">
                         <span>
                             Medicine<span> Donation</span>

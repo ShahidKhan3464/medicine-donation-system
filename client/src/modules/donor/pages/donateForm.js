@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { v4 as uuidv4 } from 'uuid';
 import DonorLinks from "./donorLinks";
 import Form from "react-bootstrap/Form";
 import Footer from '../../../components/footer';
 import Button from '../../../components/button';
-import uploadImg from '../../../images/uploadImg.png';
 import sweetAlert from '../../../components/sweetAlert';
 import { PrimaryHeading, Underline } from "../../../globalStyle";
-import filledCrossIcon from '../../../images/filledCrossIcon.svg';
 import { DonateForm } from './style';
 
 const Index = () => {
@@ -17,8 +14,6 @@ const Index = () => {
   const { state } = useLocation()
   const token = localStorage.getItem("token")
   const [loading, setLoading] = useState(false)
-  const [uploadImage, setUploadImage] = useState([])
-  console.log(uploadImage)
   const [donor, setDonor] = useState({ fullName: "", email: "", phone: "", address: "", })
   const [medicine, setMedicine] = useState({ name: "", type: "", quantity: "", mfgDate: "", expDate: "" })
 
@@ -41,7 +36,7 @@ const Index = () => {
     e.preventDefault()
     try {
       setLoading(true)
-      const { data, status } = await axios.post("http://localhost:3001/api/donation", { donor, medicine, images: uploadImage, ngoId: state.ngoId }, {
+      const { data, status } = await axios.post("http://localhost:3001/api/donation", { donor, medicine, ngoId: state.ngoId }, {
         headers: { token }
       })
 
@@ -70,11 +65,6 @@ const Index = () => {
   //   }
   //   sweetAlert('warning', 'Warning', "Please Choose Correct File")
   // }
-
-  const removeUploadImage = (id) => {
-    const removedImage = uploadImage.filter((img) => img.id !== id)
-    setUploadImage(removedImage)
-  }
 
   useEffect(() => {
     if (!token) return navigate("/donor/donateMedicine")
@@ -209,40 +199,6 @@ const Index = () => {
                       onChange={handleMedicineChange}
                     />
                   </Form.Group>
-
-                  {/* <Form.Group className="form-group">
-                    <h6>Upload Images:</h6>
-                    <div className='donateForm_form_detail_medicine_fieldControl_browseImage_shown'>
-                      {uploadImage?.map(({ id, filePath }) => (
-                        <div
-                          key={id}
-                          className='donateForm_form_detail_medicine_fieldControl_browseImage_shown_imgBox'
-                        >
-                          <img
-                            className='image'
-                            alt='randomImage'
-                            src={filePath}
-                          />
-                          <img
-                            src={filledCrossIcon}
-                            alt='filledCrossIcon'
-                            className='filledCrossIcon'
-                            onClick={() => removeUploadImage(id)}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <Form.Label htmlFor="file" className="upload-file">
-                      <Form.Control
-                        required
-                        id="file"
-                        type="file"
-                        className="file-input"
-                        onChange={(e) => handleFileChange(e)}
-                      />
-                      <img src={uploadImg} alt='upload-img' />
-                    </Form.Label>
-                  </Form.Group> */}
                 </div>
               </div>
               <Button type="submit" text="Donate Now" loading={loading} />
