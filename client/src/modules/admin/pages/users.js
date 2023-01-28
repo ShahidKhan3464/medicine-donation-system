@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PrimaryHeading, TableContainer } from '../../../globalStyle';
 import sweetAlert from "../../../components/sweetAlert";
 import { FaTrash, FaEdit } from 'react-icons/fa';
